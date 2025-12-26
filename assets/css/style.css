@@ -80,8 +80,20 @@ nav a:hover {
 
 /* Hero */
 .hero {
-  padding: 110px 0 90px;
+  padding: 120px 0 100px;
+  background:
+    radial-gradient(
+      1200px 600px at 10% -10%,
+      rgba(255, 159, 28, 0.12),
+      transparent 40%
+    ),
+    radial-gradient(
+      800px 400px at 90% 10%,
+      rgba(86, 204, 242, 0.10),
+      transparent 40%
+    );
 }
+
 
 .hero h1 {
   font-size: 44px;
