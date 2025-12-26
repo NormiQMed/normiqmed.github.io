@@ -2,11 +2,17 @@
   --bg-dark: #0f1115;
   --bg-card: #161a22;
   --bg-soft: #1c2130;
+
   --text-main: #ffffff;
-  --text-muted: #b0b6c2;
+  --text-muted: #c3c9d4;     /* improved contrast */
+  --text-subtle: #9aa3b2;
+
   --accent: #ff9f1c;
-  --border-subtle: #232733;
+  --accent-soft: rgba(255, 159, 28, 0.35);
+
+  --border-subtle: #2a2f3a;
 }
+
 
 /* Reset */
 * {
@@ -118,3 +124,25 @@ nav a:hover {
 .card {
   background: var(--bg-card);
   padding: 34px;
+/* Accessibility: focus states */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-soft);
+  border-radius: 4px;
+}
+/* Accessible link behavior */
+a {
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+p {
+  line-height: 1.75;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
