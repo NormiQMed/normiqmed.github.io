@@ -127,7 +127,7 @@ p {
   min-height: 90vh;
   background:
     linear-gradient(rgba(10,37,64,0.8), rgba(10,37,64,0.8)),
-    url("assets/hero-lab.jpg") center/cover no-repeat;
+    url("../assets/hero-lab.jpg") center/cover no-repeat;
   color: #FFFFFF;
   display: flex;
   align-items: center;
