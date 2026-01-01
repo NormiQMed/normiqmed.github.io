@@ -7,7 +7,7 @@
 
 /* -------- CSS Variables -------- */
 :root {
-  --color-bg-primary: #F7F9FB;
+  --color-bg-primary: #ECEFF3;
   --color-bg-secondary: #F4F7F9;
   --color-text-primary: #1A202C;
   --color-text-muted: #4A5568;
@@ -78,13 +78,16 @@ p {
 /* -------- Utility -------- */
 .section {
   padding: 100px 8%;
+  background-color: #FFFFFF;
+}
+.section {
+  border-top: 1px solid #D6DEE6;
 }
 
 .section.alt {
   background-color: var(--color-bg-secondary);
 }
 .section.service-block {
-  background-color: #F9FBFC; /* off-white, not grey */
   position: relative;
 }
 .section.service-block {
