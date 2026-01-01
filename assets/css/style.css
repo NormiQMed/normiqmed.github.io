@@ -264,3 +264,19 @@ footer a {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   PAGE HERO
+   ========================= */
+
+.page-hero {
+  text-align: left;
+}
+
+.page-hero-content {
+  max-width: 720px;
+}
+
+.page-hero h1 {
+  margin-bottom: 16px;
+}
