@@ -83,6 +83,10 @@ p {
 .section.alt {
   background-color: var(--color-bg-secondary);
 }
+.section.service-block {
+  background-color: #F9FBFC; /* off-white, not grey */
+}
+
 .section {
   position: relative;
 }
