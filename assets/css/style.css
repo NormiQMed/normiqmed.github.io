@@ -360,4 +360,7 @@ footer a {
 .section.service-block h2 {
   color: var(--color-brand);
 }
+.section.service-block {
+  background-color: red !important;
+}
 
