@@ -85,8 +85,6 @@ p {
 }
 .section.service-block {
   background-color: #F9FBFC; /* off-white, not grey */
-}
-.section.service-block {
   position: relative;
 }
 
@@ -360,7 +358,5 @@ footer a {
 .section.service-block h2 {
   color: var(--color-brand);
 }
-.section.service-block {
-  background-color: red !important;
-}
+
 
