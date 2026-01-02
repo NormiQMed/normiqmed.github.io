@@ -1,87 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | NeubiQ MedCon Services</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | NeubiQ MedCon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .contact-intro {
+            background: white;
+            text-align: center;
+        }
+
+        .contact-intro h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #0f3b6b;
+        }
+
+        .contact-intro p {
+            font-size: 1.05em;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 60px;
+            align-items: start;
+        }
+
+        .contact-form-wrapper {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 1.4em;
+            margin-bottom: 25px;
+            color: #0f3b6b;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95em;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.95em;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #0f3b6b;
+            box-shadow: 0 0 0 3px rgba(15, 59, 107, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            margin-bottom: 0;
+        }
+
+        .checkbox-group {
+            margin-bottom: 25px;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 12px;
+            display: block;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            font-weight: 400;
+            font-size: 0.95em;
+            cursor: pointer;
+        }
+
+        .form-note {
+            background: #e8f0ff;
+            border-left: 4px solid #0f3b6b;
+            padding: 12px 15px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #0f3b6b;
+            margin-bottom: 25px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(15, 59, 107, 0.3);
+        }
+
+        .contact-info {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            height: 100%;
+        }
+
+        .contact-info h3 {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            color: #0f3b6b;
+        }
+
+        .info-block {
+            margin-bottom: 35px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-block h4 {
+            font-size: 1.1em;
+            color: #0f3b6b;
+            margin-bottom: 10px;
+        }
+
+        .info-block p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .info-block a {
+            color: #0f3b6b;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .info-block a:hover {
+            color: #ff9800;
+        }
+
+        .response-time {
+            background: #fff3cd;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #ff6f00;
+            margin-top: 20px;
+        }
+
+        .why-contact {
+            background: #f9f9f9;
+            margin-top: 80px;
+        }
+
+        .why-contact h2 {
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #0f3b6b;
+        }
+
+        .reason-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .reason-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .reason-card h4 {
+            font-size: 1.2em;
+            color: #0f3b6b;
+            margin-bottom: 12px;
+        }
+
+        .reason-card p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .icon-placeholder {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+            margin-top: 60px;
+        }
+
+        .success-message {
+            display: none;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-wrapper,
+            .contact-info {
+                padding: 25px;
+            }
+
+            .reason-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>Let's discuss your regulatory challenges and build a clear path forward</p>
+    </header>
 
-<header>
-  <div class="container">
-    <nav>
-      <strong>NeubiQ MedCon Services</strong>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="approach.html">Approach</a>
-        <a href="resources.html">Resources</a>
-        <a href="about.html">About</a>
-      </div>
-    </nav>
-  </div>
-</header>
+    <section class="contact-intro container">
+        <h2>Get in Touch</h2>
+        <p>Whether you're starting your medical device journey or scaling globally, we're here to help. Reach out with your questions, and we'll respond within 24 hours.</p>
+    </section>
 
-<section class="hero">
-  <div class="container">
-    <h1>Contact Us</h1>
-    <p>
-      If you are seeking structured, audit-ready Quality Management System
-      support for medical devices, we welcome the opportunity to discuss
-      your requirements.
-    </p>
-  </div>
-</section>
+    <section class="container">
+        <div class="contact-grid">
+            <div class="contact-form-wrapper">
+                <h3>Send us a message</h3>
+                
+                <div class="success-message" id="successMessage">
+                    ✓ Thank you! We've received your inquiry. We'll get back to you within 24 hours.
+                </div>
 
-<section class="section">
-  <div class="container card-grid">
+                <form id="<form action="https://formspree.io/f/xgovywza" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
 
-    <div class="card">
-      <h3>Consultation</h3>
-      <p>
-        We engage with medical device manufacturers to understand regulatory
-        scope, organizational maturity, and compliance objectives before
-        proposing tailored support.
-      </p>
-    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-    <div class="card">
-      <h3>Email</h3>
-      <p>
-        For service inquiries, collaboration opportunities, or general
-        questions, please contact us at:
-      </p>
-      <p style="margin-top:10px;">
-        <strong>contact@neubiq.info</strong>
-      </p>
-    </div>
+                    <div class="form-group">
+                        <label for="company">Company Name *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
 
-    <div class="card">
-      <h3>Engagement Scope</h3>
-      <p>
-        Our services are provided on a project or retainer basis, depending
-        on the nature and duration of support required.
-      </p>
-    </div>
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select your country</option>
+                            <option value="India">India</option>
+                            <option value="United States">United States</option>
+                            <option value="Germany">Germany</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="France">France</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
 
-  </div>
-</section>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
 
-<section class="section">
-  <div class="container">
-    <h2>Next Steps</h2>
-    <p style="color:#b0b6c2; max-width:720px; margin-top:10px;">
-      Share a brief overview of your organization, product type, target markets,
-      and current QMS status. This allows us to assess alignment and respond
-      efficiently.
-    </p>
-  </div>
-</section>
+                    <div class="form-group">
+                        <label>What services are you interested in? *</label>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="service1" name="services" value="QMS Architecture">
+                            <label for="service1">Regulatory & QMS Architecture</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="service2" name="services" value="AI/SaMD Governance">
+                            <label for="service2">AI, SaMD & Software Governance</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="service3" name="services" value="Global Market Authorization">
+                            <label for="service3">Global Market Authorization & Scale</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="service4" name="services" value="Not sure yet">
+                            <label for="service4">Not sure yet - need consultation</label>
+                        </div>
+                    </div>
 
-<footer>
-  NeubiQ MedCon Services © All rights reserved
-</footer>
+                    <div class="form-group">
+                        <label for="message">Tell us about your regulatory challenge *</label>
+                        <textarea id="message" name="message" required placeholder="Describe your device, current regulatory status, and key challenges..."></textarea>
+                    </div>
 
+                    <div class="form-note">
+                        <strong>Note:</strong> All information is confidential and protected. We'll use your details only to respond to your inquiry.
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Inquiry</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Quick Information</h3>
+
+                <div class="info-block">
+                    <h4>Response Time</h4>
+                    <p>We typically respond to all inquiries within <strong>24 hours</strong> during business days.</p>
+                </div>
+
+                <div class="info-block">
+                    <h4>What to Expect</h4>
+                    <p>After you submit your inquiry, our team will review your information and schedule a <strong>free 30-minute consultation call</strong> to understand your regulatory needs and discuss next steps.</p>
+                </div>
+
+                <div class="info-block">
+                    <h4>Email</h4>
+                    <p><a href="mailto:info@neubiq.com">info@neubiq.com</a></p>
+                    <p><a href="mailto:regulatory@neubiq.com">regulatory@neubiq.com</a> (for regulatory queries)</p>
+                </div>
+
+                <div class="info-block">
+                    <h4>Service Areas</h4>
+                    <p>🇺🇸 USA (FDA)</p>
+                    <p>🇪🇺 European Union (MDR)</p>
+                    <p>🇮🇳 India (CDSCO)</p>
+                </div>
+
+                <div class="info-block">
+                    <h4>Best Time to Reach Us</h4>
+                    <p>Monday - Friday, 9:00 AM - 6:00 PM IST</p>
+                </div>
+
+                <div class="response-time">
+                    <strong>Faster response?</strong> Include your phone number and mention your preferred contact time.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-contact container">
+        <h2>Why Choose NeubiQ for Your Regulatory Needs?</h2>
+        <div class="reason-cards">
+            <div class="reason-card">
+                <div class="icon-placeholder">✓</div>
+                <h4>Execution-Focused</h4>
+                <p>We don't just advise—we implement. Clear ownership, traceable deliverables, audit-ready documentation.</p>
+            </div>
+            <div class="reason-card">
+                <div class="icon-placeholder">🌍</div>
+                <h4>Global Expertise</h4>
+                <p>FDA, EU MDR, and India CDSCO experience. We understand regional requirements and help you navigate them efficiently.</p>
+            </div>
+            <div class="reason-card">
+                <div class="icon-placeholder">⚡</div>
+                <h4>AI/SaMD Specialists</h4>
+                <p>Regulatory pathways for software and AI-enabled devices are our core focus. We stay ahead of evolving standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>NeubiQ MedCon Services © All rights reserved</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {
+                firstName: formData.get('firstName'),
+                lastName: formData.get('lastName'),
+                email: formData.get('email'),
+                company: formData.get('company'),
+                country: formData.get('country'),
+                phone: formData.get('phone'),
+                services: Array.from(formData.getAll('services')).join(', '),
+                message: formData.get('message')
+            };
+
+            // Log the data (you'll integrate with email service later)
+            console.log('Form submitted:', data);
+
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset form
+            this.reset();
+
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+
+            // Hide success message after 5 seconds
+            setTimeout(function() {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
