@@ -1,99 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | NeubiQ MedCon Services</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | NeubiQ MedCon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .market-focus {
+            background: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .market-focus h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: #0f3b6b;
+        }
+
+        .market-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            background: #e8f0ff;
+            border-left: 4px solid #0f3b6b;
+            padding: 15px 25px;
+            border-radius: 4px;
+            font-weight: 500;
+            color: #0f3b6b;
+        }
+
+        .badge.highlight {
+            background: #fff3cd;
+            border-left-color: #ff9800;
+            color: #ff6f00;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid #0f3b6b;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .service-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 12px;
+            color: #0f3b6b;
+        }
+
+        .service-card .subtitle {
+            font-size: 0.95em;
+            color: #ff9800;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .service-card li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .service-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0f3b6b;
+            font-weight: bold;
+        }
+
+        .regional-expertise {
+            background: white;
+            margin-top: 80px;
+            padding: 60px 20px;
+        }
+
+        .regional-expertise h2 {
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 40px;
+            color: #0f3b6b;
+        }
+
+        .regional-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .regional-box {
+            background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
+            padding: 25px;
+            border-radius: 6px;
+            border-left: 4px solid #0f3b6b;
+        }
+
+        .regional-box h4 {
+            color: #0f3b6b;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .regional-box p {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .how-we-work {
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .how-we-work h2 {
+            font-size: 1.8em;
+            margin-bottom: 40px;
+            color: #0f3b6b;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .step {
+            position: relative;
+        }
+
+        .step-number {
+            background: #0f3b6b;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin: 0 auto 15px;
+        }
+
+        .step h4 {
+            color: #0f3b6b;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .which-service {
+            background: white;
+            margin-top: 80px;
+            padding: 60px 20px;
+        }
+
+        .which-service h2 {
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 40px;
+            color: #0f3b6b;
+        }
+
+        .service-selector {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .selector-card {
+            background: #f5f5f5;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 4px solid #ddd;
+        }
+
+        .selector-card:hover {
+            background: #e8f0ff;
+            border-left-color: #0f3b6b;
+        }
+
+        .selector-card h4 {
+            color: #0f3b6b;
+            margin-bottom: 5px;
+        }
+
+        .selector-card p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .cta-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1em;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #0f3b6b;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #0f3b6b;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .market-badges {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .badge {
+                display: block;
+                text-align: left;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Our Services</h1>
+        <p>Structured regulatory, quality, and digital health expertise designed to accelerate medical device approval and global commercialization</p>
+    </header>
 
-<section class="section services-intro">
-  <div class="page-hero-content">
-    <h1>Our Services</h1>
-    <p class="section-intro">
-      Structured regulatory, quality, and digital health services designed to support medical device manufacturers across the entire product lifecycle.
-    </p>
-  </div>
-</section>
+    <section class="market-focus container">
+        <h2>We Serve Medical Device Manufacturers Globally</h2>
+        <div class="market-badges">
+            <div class="badge">🌍 FDA & EU MDR Expertise</div>
+            <div class="badge">🌍 India CDSCO Pathway</div>
+            <div class="badge highlight">⚡ AI/SaMD Specialists</div>
+        </div>
+        <p style="margin-top: 20px; color: #666; font-size: 1em;">
+            With specific focus on AI-enabled and software-driven medical devices, we help manufacturers navigate complex global regulatory landscapes—from FDA approval to EU MDR compliance to India CDSCO clearance.
+        </p>
+    </section>
 
+    <section class="container">
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="subtitle">FOUNDATION</div>
+                <h3>Regulatory & QMS Architecture</h3>
+                <p>Design and implement audit-ready quality and regulatory systems that scale with your product and organization.</p>
+                <ul>
+                    <li>ISO 13485 QMS design, remediation, and maintenance</li>
+                    <li>Design History File (DHF) and Technical File development</li>
+                    <li>Internal audits, supplier audits, and gap assessments</li>
+                    <li>Notified Body and FDA inspection preparation</li>
+                    <li>Change management, CAPA, and risk integration</li>
+                </ul>
+            </div>
 
+            <div class="service-card">
+                <div class="subtitle">SPECIALIZED</div>
+                <h3>AI, SaMD & Software Governance</h3>
+                <p>Regulatory strategy and governance for software-driven and AI-enabled medical devices operating in evolving regulatory landscapes.</p>
+                <ul>
+                    <li>IEC 62304 and IEC 62366 lifecycle integration</li>
+                    <li>SaMD classification and regulatory pathway strategy</li>
+                    <li>AI/ML governance aligned with GMLP principles</li>
+                    <li>Cybersecurity, data integrity, and validation strategy</li>
+                    <li>Software risk management and usability engineering</li>
+                </ul>
+            </div>
 
-<section class="section service-block">
-  <h2>Regulatory & QMS Architecture</h2>
-  <p class="section-intro">
-    We design and implement audit-ready quality and regulatory systems
-    that scale with your product and organization.
-  </p>
+            <div class="service-card">
+                <div class="subtitle">GROWTH</div>
+                <h3>Global Market Authorization & Scale</h3>
+                <p>Strategic regulatory and post-market support to move beyond approval toward sustainable global commercialization.</p>
+                <ul>
+                    <li>EU MDR and FDA submission planning and execution</li>
+                    <li>Post-market surveillance (PMS) and vigilance frameworks</li>
+                    <li>Clinical strategy and CRO oversight support</li>
+                    <li>Regulatory due diligence for investors and acquirers</li>
+                    <li>Market expansion and lifecycle regulatory strategy</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <ul class="service-list">
-    <li>ISO 13485 QMS design, remediation, and maintenance</li>
-    <li>Design History File (DHF) and Technical File development</li>
-    <li>Internal audits, supplier audits, and gap assessments</li>
-    <li>Notified Body and FDA inspection preparation</li>
-    <li>Change management, CAPA, and risk integration</li>
-  </ul>
-</section>
+    <section class="regional-expertise container">
+        <h2>Regulatory Expertise Across Key Markets</h2>
+        <div class="regional-grid">
+            <div class="regional-box">
+                <h4>🇺🇸 FDA (United States)</h4>
+                <p>510(k), PMA pathways, pre-submission strategy, inspection readiness, and ongoing compliance monitoring.</p>
+            </div>
+            <div class="regional-box">
+                <h4>🇪🇺 EU MDR (European Union)</h4>
+                <p>CE marking, Notified Body coordination, technical documentation, post-market surveillance systems.</p>
+            </div>
+            <div class="regional-box">
+                <h4>🇮🇳 India CDSCO</h4>
+                <p>Device licensing, licensing dossier preparation, local regulatory strategy, and post-market compliance.</p>
+            </div>
+        </div>
+    </section>
 
+    <section class="how-we-work">
+        <div class="container">
+            <h2>How We Work</h2>
+            <p style="color: #666; margin-bottom: 20px;">Our engagement model integrates seamlessly with your internal teams while maintaining regulatory accountability and execution clarity.</p>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Gap Assessment</h4>
+                    <p>Define scope, priorities, and regulatory risk</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Execution Planning</h4>
+                    <p>Clear ownership of deliverables and timeline</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Direct Collaboration</h4>
+                    <p>Work with your QA, RA, R&D, and software teams</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Audit-Ready Documentation</h4>
+                    <p>Traceable records aligned with submissions</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
- <section class="section alt">
-  <h2>AI, SaMD & Software Governance</h2>
-  <p class="section-intro">
-    Regulatory strategy and governance for software-driven and AI-enabled
-    medical devices operating in evolving regulatory landscapes.
-  </p>
+    <section class="which-service container">
+        <h2>Which Service Do You Need?</h2>
+        <div class="service-selector">
+            <div class="selector-card">
+                <h4>Starting from scratch or rebuilding QMS?</h4>
+                <p>→ Regulatory & QMS Architecture</p>
+            </div>
+            <div class="selector-card">
+                <h4>Building an AI-enabled or software-driven device?</h4>
+                <p>→ AI, SaMD & Software Governance</p>
+            </div>
+            <div class="selector-card">
+                <h4>Ready for approval or expanding into new markets?</h4>
+                <p>→ Global Market Authorization & Scale</p>
+            </div>
+            <div class="selector-card">
+                <h4>Not sure where to start?</h4>
+                <p>→ Book a free consultation to define your roadmap</p>
+            </div>
+        </div>
+    </section>
 
-  <ul class="service-list">
-    <li>IEC 62304 and IEC 62366 lifecycle integration</li>
-    <li>SaMD classification and regulatory pathway strategy</li>
-    <li>AI/ML governance aligned with GMLP principles</li>
-    <li>Cybersecurity, data integrity, and validation strategy</li>
-    <li>Software risk management and usability engineering</li>
-  </ul>
-</section>
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Accelerate Your Regulatory Strategy?</h2>
+            <p>Let's assess your current state and build a clear path to market approval.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+                <a href="#" class="btn btn-secondary">Download Service Overview</a>
+            </div>
+        </div>
+    </section>
 
-
-  <section class="section service-block">
-  <h2>Global Market Authorization & Scale</h2>
-  <p class="section-intro">
-    Strategic regulatory and post-market support to move beyond approval
-    toward sustainable global commercialization.
-  </p>
-
-  <ul class="service-list">
-    <li>EU MDR and FDA submission planning and execution</li>
-    <li>Post-market surveillance (PMS) and vigilance frameworks</li>
-    <li>Clinical strategy and CRO oversight support</li>
-    <li>Regulatory due diligence for investors and acquirers</li>
-    <li>Market expansion and lifecycle regulatory strategy</li>
-  </ul>
-</section>
-
-  <section class="section alt">
-  <h2>How We Work</h2>
-  <p class="section-intro">
-    Our engagement model is designed to integrate seamlessly with your
-    internal teams while maintaining regulatory accountability and execution clarity.
-  </p>
-
-  <ul class="service-list">
-    <li>Focused gap assessment to define scope, priorities, and regulatory risk</li>
-    <li>Execution-led consulting with clear ownership of deliverables</li>
-    <li>Direct collaboration with QA, RA, R&D, and software teams</li>
-    <li>Traceable documentation aligned with audits and submissions</li>
-  </ul>
-</section>
-
-
- <section class="cta-band">
-  <h2>Need clarity on your regulatory or quality strategy?</h2>
-  <a href="contact.html" class="btn-primary">Book a Consultation</a>
-</section>
-
-
-<footer>
-  NeubiQ MedCon Services © All rights reserved
-</footer>
-
+    <footer>
+        <p>NeubiQ MedCon Services © All rights reserved</p>
+    </footer>
 </body>
 </html>
