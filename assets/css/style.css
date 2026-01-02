@@ -366,4 +366,23 @@ footer a {
   color: var(--color-brand);
 }
 
+/* =========================
+   SERVICES INTRO BAND
+   ========================= */
+
+.services-intro {
+  background-color: #0A2540; /* Brand Navy */
+  padding: 120px 8% 100px;
+}
+
+.services-intro h1 {
+  color: #FFFFFF;
+}
+
+.services-intro .section-intro {
+  color: #E2E8F0;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 720px;
+}
 
