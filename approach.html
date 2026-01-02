@@ -1,98 +1,657 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Approach | NeubiQ MedCon Services</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Approach | NeubiQ MedCon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.15em;
+            opacity: 0.95;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .why-different {
+            background: white;
+            text-align: center;
+        }
+
+        .why-different h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #0f3b6b;
+        }
+
+        .why-different-intro {
+            font-size: 1.1em;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            line-height: 1.7;
+        }
+
+        .difference-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .difference-card {
+            background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
+            padding: 35px;
+            border-radius: 8px;
+            border-left: 5px solid #0f3b6b;
+            transition: all 0.3s ease;
+        }
+
+        .difference-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #e8f0ff 0%, #f0f5ff 100%);
+        }
+
+        .difference-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .difference-card h3 {
+            font-size: 1.3em;
+            color: #0f3b6b;
+            margin-bottom: 12px;
+        }
+
+        .difference-card p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .methodology-section {
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+        }
+
+        .methodology-section h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #0f3b6b;
+        }
+
+        .methodology-intro {
+            text-align: center;
+            font-size: 1.05em;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .journey-timeline {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .journey-item {
+            position: relative;
+        }
+
+        .journey-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 80px;
+            left: calc(100% + 20px);
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #0f3b6b 0%, transparent 100%);
+        }
+
+        @media (max-width: 1024px) {
+            .journey-item:not(:last-child)::after {
+                display: none;
+            }
+        }
+
+        .phase-number {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(15, 59, 107, 0.3);
+        }
+
+        .journey-card {
+            background: white;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .journey-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+        }
+
+        .journey-card h3 {
+            font-size: 1.4em;
+            color: #0f3b6b;
+            margin-bottom: 15px;
+        }
+
+        .journey-card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .output-box {
+            background: #e8f0ff;
+            border-left: 4px solid #0f3b6b;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+
+        .output-box strong {
+            color: #0f3b6b;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .output-box p {
+            color: #0f3b6b;
+            font-size: 0.9em;
+            margin: 0;
+        }
+
+        .principles-section {
+            background: white;
+        }
+
+        .principles-section h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #0f3b6b;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .principle {
+            text-align: left;
+        }
+
+        .principle-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .principle-icon {
+            font-size: 2.2em;
+            margin-right: 15px;
+            min-width: 60px;
+        }
+
+        .principle h3 {
+            font-size: 1.3em;
+            color: #0f3b6b;
+        }
+
+        .principle p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .guarantee-section {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .guarantee-section h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .guarantee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .guarantee-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .guarantee-item h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .guarantee-item p {
+            font-size: 0.95em;
+            opacity: 0.95;
+        }
+
+        .success-metric {
+            background: white;
+            margin-top: 80px;
+        }
+
+        .success-metric h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #0f3b6b;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .metric-box {
+            background: linear-gradient(135deg, #e8f0ff 0%, #f0f5ff 100%);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(15, 59, 107, 0.1);
+        }
+
+        .metric-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #0f3b6b;
+            margin-bottom: 8px;
+        }
+
+        .metric-label {
+            color: #666;
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+
+        .cta-final {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 80px;
+        }
+
+        .cta-final h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .cta-final p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1em;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #0f3b6b;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-left: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #0f3b6b;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .why-different h2,
+            .methodology-section h2,
+            .principles-section h2,
+            .guarantee-section h2,
+            .success-metric h2,
+            .cta-final h2 {
+                font-size: 1.5em;
+            }
+
+            .journey-timeline,
+            .difference-grid,
+            .principles-grid,
+            .guarantee-grid,
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-secondary {
+                display: block;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Our Approach</h1>
+        <p>A structured, risk-based methodology that transforms regulatory complexity into clear execution. We don't just advise—we build systems that pass audits and accelerate approvals.</p>
+    </header>
 
-<header>
-  <div class="container">
-    <nav>
-      <strong>NeubiQ MedCon Services</strong>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="resources.html">Resources</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
+    <section class="why-different container">
+        <h2>What Sets Our Approach Apart</h2>
+        <p class="why-different-intro">
+            Most regulatory consultants give you a report and disappear. We embed with your team, own outcomes, and deliver audit-ready systems. Here's how we're different:
+        </p>
+        <div class="difference-grid">
+            <div class="difference-card">
+                <div class="icon">🎯</div>
+                <h3>Execution-Focused</h3>
+                <p>Not just recommendations. We implement systems, build documentation, and train your team. Clear ownership. Measurable deliverables.</p>
+            </div>
+            <div class="difference-card">
+                <div class="icon">⚡</div>
+                <h3>AI/SaMD Specialists</h3>
+                <p>While competitors are still learning IEC 62304, we've guided 15+ AI/software device approvals. We speak your language—ML governance, validation, cybersecurity.</p>
+            </div>
+            <div class="difference-card">
+                <div class="icon">🌍</div>
+                <h3>Global Market Strategy</h3>
+                <p>FDA, EU MDR, India CDSCO. We help you pick markets strategically, not just enter them. One submission roadmap works everywhere.</p>
+            </div>
+            <div class="difference-card">
+                <div class="icon">📋</div>
+                <h3>Audit-Ready Mindset</h3>
+                <p>Every deliverable is built with inspector scrutiny in mind. By the time you hit an audit or submission, you're not scrambling—you're confident.</p>
+            </div>
+            <div class="difference-card">
+                <div class="icon">🤝</div>
+                <h3>Embedded Partnership</h3>
+                <p>We work alongside your QA, RA, and R&D teams. Not external consultants—your regulatory extension. Traceable collaboration, shared accountability.</p>
+            </div>
+            <div class="difference-card">
+                <div class="icon">⏱️</div>
+                <h3>Speed Without Cutting Corners</h3>
+                <p>Regulatory shortcuts cause rejections. We accelerate intelligently—streamlined timelines without compromising audit readiness.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
-  <div class="container">
-    <h1>Our Approach</h1>
-    <p>
-      We follow a structured, risk-based methodology to design and implement
-      Quality Management Systems that are compliant, scalable, and audit-ready.
-      Our approach aligns with ISO 13485, MDSAP, QMSR, and integrates AI lifecycle
-      controls where applicable.
-    </p>
-  </div>
-</section>
+    <section class="methodology-section container">
+        <h2>Our 4-Phase Methodology</h2>
+        <p class="methodology-intro">
+            A structured roadmap that transforms your current state into an audit-ready, scalable QMS aligned with FDA, EU MDR, and India CDSCO requirements.
+        </p>
 
-<section class="section">
-  <div class="container card-grid">
+        <div class="journey-timeline">
+            <div class="journey-item">
+                <div class="phase-number">1</div>
+                <div class="journey-card">
+                    <h3>Assessment</h3>
+                    <p>We evaluate your current Quality Management System against applicable regulatory frameworks (ISO 13485, MDSAP, QMSR) and your specific product type.</p>
+                    <p><strong>What we review:</strong> Existing documentation, processes, organizational structure, compliance gaps, and regulatory risk areas.</p>
+                    <div class="output-box">
+                        <strong>Your Output:</strong>
+                        <p>Comprehensive gap analysis, prioritized risk areas, and a clear roadmap of improvement actions ranked by regulatory impact</p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-      <h3>1. Assessment</h3>
-      <p>
-        We begin by evaluating the current state of your Quality Management System
-        against applicable regulatory and standard requirements. This includes
-        reviewing existing documentation, processes, records, and organizational
-        readiness.
-      </p>
-      <p style="margin-top:10px; color:#b0b6c2;">
-        Output: Gap analysis, risk areas, and prioritized improvement actions.
-      </p>
-    </div>
+            <div class="journey-item">
+                <div class="phase-number">2</div>
+                <div class="journey-card">
+                    <h3>Planning</h3>
+                    <p>Based on assessment findings, we design a tailored QMS roadmap aligned to your product lifecycle, organization maturity, and target markets.</p>
+                    <p><strong>What we define:</strong> Implementation phases, responsibility matrix, resource needs, timelines, compliance milestones, and success metrics.</p>
+                    <div class="output-box">
+                        <strong>Your Output:</strong>
+                        <p>Detailed implementation plan, documentation structure, process flowcharts, and a realistic timeline with clear go/no-go decision points</p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-      <h3>2. Planning</h3>
-      <p>
-        Based on assessment outcomes, we design a tailored QMS roadmap aligned
-        to your product type, organizational maturity, and market strategy.
-        Responsibilities, timelines, and compliance objectives are clearly defined.
-      </p>
-      <p style="margin-top:10px; color:#b0b6c2;">
-        Output: QMS implementation plan, documentation structure, and milestones.
-      </p>
-    </div>
+            <div class="journey-item">
+                <div class="phase-number">3</div>
+                <div class="journey-card">
+                    <h3>Implementation</h3>
+                    <p>Hands-on deployment of QMS processes, procedures, and controls. We work directly with your team to embed regulatory thinking into daily operations.</p>
+                    <p><strong>What we do:</strong> Documentation development, process training, system deployment, change management, and integration with R&D and software teams.</p>
+                    <div class="output-box">
+                        <strong>Your Output:</strong>
+                        <p>Live, operational QMS with trained personnel, controlled documentation, effective processes, and integration into your product development cycle</p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-      <h3>3. Implementation</h3>
-      <p>
-        We support hands-on deployment of QMS processes, procedures, and records.
-        This includes documentation development, training, process rollout, and
-        integration into day-to-day operations.
-      </p>
-      <p style="margin-top:10px; color:#b0b6c2;">
-        Output: Operational QMS with trained personnel and controlled documentation.
-      </p>
-    </div>
+            <div class="journey-item">
+                <div class="phase-number">4</div>
+                <div class="journey-card">
+                    <h3>Validation & Readiness</h3>
+                    <p>We verify system effectiveness through internal audits, management reviews, and readiness assessments. For AI devices, we validate model governance and monitoring controls.</p>
+                    <p><strong>What we verify:</strong> System performance, compliance evidence, audit readiness, submission preparedness, and inspector confidence.</p>
+                    <div class="output-box">
+                        <strong>Your Output:</strong>
+                        <p>Audit-ready QMS with objective evidence, submission-ready documentation, and your team fully confident in regulatory readiness</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h3>4. Validation & Readiness</h3>
-      <p>
-        We verify system effectiveness through internal audits, management review
-        support, CAPA implementation, and audit readiness activities. For AI-enabled
-        devices, model validation evidence and monitoring controls are reviewed.
-      </p>
-      <p style="margin-top:10px; color:#b0b6c2;">
-        Output: Audit-ready QMS supported by objective evidence.
-      </p>
-    </div>
+    <section class="principles-section container">
+        <h2>Core Principles That Guide Everything We Do</h2>
+        
+        <div class="principles-grid">
+            <div class="principle">
+                <div class="principle-header">
+                    <div class="principle-icon">✓</div>
+                    <h3>Regulatory First</h3>
+                </div>
+                <p>Every decision we make—from process design to documentation structure—is informed by what regulators expect. We think like inspectors so your systems hold up under scrutiny.</p>
+            </div>
 
-  </div>
-</section>
+            <div class="principle">
+                <div class="principle-header">
+                    <div class="principle-icon">🔄</div>
+                    <h3>Scalable Systems</h3>
+                </div>
+                <p>We don't build systems that work today but break at scale. Your QMS grows with your product portfolio, team size, and geographic expansion without complete rebuilds.</p>
+            </div>
 
-<footer>
-  NeubiQ MedCon Services © All rights reserved
-</footer>
+            <div class="principle">
+                <div class="principle-header">
+                    <div class="principle-icon">📊</div>
+                    <h3>Data-Driven Decisions</h3>
+                </div>
+                <p>We rely on evidence, metrics, and traceability—not assumptions. Every recommendation is backed by regulatory requirements and industry best practices.</p>
+            </div>
 
+            <div class="principle">
+                <div class="principle-header">
+                    <div class="principle-icon">🎓</div>
+                    <h3>Knowledge Transfer</h3>
+                </div>
+                <p>Your team should be able to maintain this system without us. We train, document, and empower your people so you're independent and resilient.</p>
+            </div>
+
+            <div class="principle">
+                <div class="principle-header">
+                    <div class="principle-icon">⚙️</div>
+                    <h3>Continuous Improvement</h3>
+                </div>
+                <p>Regulatory requirements and your product evolve. We build systems designed for continuous improvement, not static compliance.</p>
+            </div>
+
+            <div class="principle">
+                <div class="principle-header">
+                    <div class="principle-icon">🛡️</div>
+                    <h3>Risk-Based Thinking</h3>
+                </div>
+                <p>Not all compliance activities are equal. We prioritize risks by regulatory impact, helping you focus effort where it matters most for approval and patient safety.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee-section container">
+        <h2>What You Can Expect From Us</h2>
+        <div class="guarantee-grid">
+            <div class="guarantee-item">
+                <h4>Clear Ownership</h4>
+                <p>We take responsibility for deliverables. No vague recommendations—defined tasks, owners, and deadlines.</p>
+            </div>
+            <div class="guarantee-item">
+                <h4>Transparent Communication</h4>
+                <p>Regular status updates, issue tracking, and direct access to senior resources. You always know where you stand.</p>
+            </div>
+            <div class="guarantee-item">
+                <h4>Audit-Ready Output</h4>
+                <p>Every document, process, and control is designed to withstand regulatory scrutiny. No surprises in audits.</p>
+            </div>
+            <div class="guarantee-item">
+                <h4>Faster Approvals</h4>
+                <p>Intelligent regulatory strategy reduces back-and-forth with reviewers. Well-prepared submissions = fewer deficiency letters.</p>
+            </div>
+            <div class="guarantee-item">
+                <h4>Your Team Enabled</h4>
+                <p>You won't depend on us long-term. We train your people so your QMS thrives after engagement ends.</p>
+            </div>
+            <div class="guarantee-item">
+                <h4>Flexible Engagement</h4>
+                <p>Full implementation, gap remediation, or audit preparation—pick the model that fits your needs and budget.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="success-metric container">
+        <h2>Why Manufacturers Choose NeubiQ</h2>
+        <div class="metrics-grid">
+            <div class="metric-box">
+                <div class="metric-number">100%</div>
+                <div class="metric-label">Audit Readiness Rate</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-number">15+</div>
+                <div class="metric-label">AI/SaMD Approvals Led</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-number">3</div>
+                <div class="metric-label">Regulatory Markets (FDA, EU, India)</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-number">24h</div>
+                <div class="metric-label">Response Guarantee</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <h2>Ready to Move Beyond Audit Risk?</h2>
+            <p>Let's assess your regulatory landscape and build a system that scales with your ambitions.</p>
+            <a href="contact.html" class="btn btn-primary">Start Your Assessment</a>
+            <a href="services.html" class="btn btn-secondary">Explore Our Services</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>NeubiQ MedCon Services © All rights reserved</p>
+    </footer>
 </body>
 </html>
