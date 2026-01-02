@@ -497,40 +497,14 @@
         <p>NeubiQ MedCon Services © All rights reserved</p>
     </footer>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = {
-                firstName: formData.get('firstName'),
-                lastName: formData.get('lastName'),
-                email: formData.get('email'),
-                company: formData.get('company'),
-                country: formData.get('country'),
-                phone: formData.get('phone'),
-                services: Array.from(formData.getAll('services')).join(', '),
-                message: formData.get('message')
-            };
-
-            // Log the data (you'll integrate with email service later)
-            console.log('Form submitted:', data);
-
-            // Show success message
-            document.getElementById('successMessage').style.display = 'block';
-            
-            // Reset form
-            this.reset();
-
-            // Scroll to success message
-            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
-
-            // Hide success message after 5 seconds
-            setTimeout(function() {
-                document.getElementById('successMessage').style.display = 'none';
-            }, 5000);
-        });
-    </script>
+   <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Let Formspree handle submission
+        // Just show loading state
+        const btn = document.querySelector('.btn-submit');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+    });
+</script>
 </body>
 </html>
