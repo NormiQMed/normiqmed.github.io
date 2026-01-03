@@ -281,12 +281,12 @@ p {
   padding: 80px 8%;
   text-align: center;
 }
-.cta-band .btn-primary {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.cta-band .btn-primary,
+.cta-band .btn-secondary {
+  display: inline-block;
   margin: 0 auto;
 }
+
 
 .cta-band h2 {
   color: #FFFFFF;
