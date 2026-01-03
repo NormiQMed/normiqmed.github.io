@@ -281,11 +281,13 @@ p {
   padding: 80px 8%;
   text-align: center;
 }
-.cta-band .btn-primary,
-.cta-band .btn-secondary {
-  display: inline-block;
-  margin: 0 auto;
+.cta-band .final-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
 }
+
 
 
 .cta-band h2 {
