@@ -174,7 +174,8 @@ p {
    HERO
    ========================= */
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
+  padding-top: 80px;
   background:
     linear-gradient(rgba(10,37,64,0.75), rgba(10,37,64,0.75)),
     url("../hero-lab.png") center/cover no-repeat;
@@ -183,19 +184,24 @@ p {
   align-items: center;
 }
 .hero h1 {
-  color: #FFFFFF;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    font-size: 56px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 640px;
 }
 
 .hero p {
-  font-size: 18px;
-  margin: 24px 0 40px;
-  color: #E2E8F0;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 24px 0 40px;
+    color: #E2E8F0;
 }
+
 
 /* =========================
    TRUST BAR
