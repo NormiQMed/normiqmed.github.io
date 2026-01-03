@@ -1,767 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeubiQ MedCon | Regulatory & QMS Consulting</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeubiQ MedCon | Regulatory & QMS Consulting</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: #2a2a2a;
-            background: #ffffff;
-        }
+<style>
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            z-index: 1000;
-            padding: 0 40px;
-        }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+  background: #ffffff;
+}
 
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1300px;
-            margin: 0 auto;
-            height: 70px;
-        }
+/* =====================
+   NAVIGATION
+===================== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
 
-        nav .logo {
-            font-size: 1.4em;
-            font-weight: 700;
-            color: #0f3b6b;
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
+nav .container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 40px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 40px;
-            align-items: center;
-        }
+nav .logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f3b6b;
+  text-decoration: none;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #2a2a2a;
-            font-size: 0.95em;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+  align-items: center;
+}
 
-        nav a:hover {
-            color: #0f3b6b;
-        }
+nav a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+}
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #0f3b6b;
-            transition: width 0.3s ease;
-        }
+.btn-cta {
+  background: #0f3b6b;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-weight: 600;
+}
 
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        .btn-cta {
-            background: #0f3b6b;
-            color: white !important;
-            padding: 10px 24px;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-cta:hover {
-            background: #1a5fa0;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(15, 59, 107, 0.3);
-        }
-
-        .btn-cta::after {
-            display: none;
-        }
-
-        /* Hero Section */
-        /* Hero Section */
+/* =====================
+   HERO (BACKGROUND IMAGE)
+===================== */
 .hero {
+  min-height: 100vh;
   padding-top: 140px;
   padding-bottom: 100px;
-  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
-  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(10,37,64,0.78),
+      rgba(10,37,64,0.78)
+    ),
+    url("assets/hero-lab.png") center / cover no-repeat;
+
   display: flex;
   align-items: center;
 }
 
-
-    
-        .hero .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-size: 3.2em;
-            line-height: 1.2;
-            color: #0f3b6b;
-            margin-bottom: 20px;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
-
-        .hero-content p {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 40px;
-            line-height: 1.7;
-            max-width: 500px;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 14px 32px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 1em;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: #0f3b6b;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #1a5fa0;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(15, 59, 107, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #0f3b6b;
-            border: 2px solid #0f3b6b;
-        }
-
-        .btn-secondary:hover {
-            background: #0f3b6b;
-            color: white;
-        }
-
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero-visual-box {
-            width: 100%;
-            max-width: 450px;
-            aspect-ratio: 1;
-            background: linear-gradient(135deg, #e8f0ff 0%, #f0f5ff 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5em;
-            opacity: 0.8;
-            border: 1px solid rgba(15, 59, 107, 0.1);
-        }
-
-        /* Trust Section */
-        .trust-section {
-            background: white;
-            padding: 80px 40px;
-        }
-
-        .trust-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 2em;
-            color: #0f3b6b;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .section-header p {
-            font-size: 1.05em;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-
-        .trust-item {
-            text-align: center;
-            padding: 30px;
-        }
-
-        .trust-item .icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-
-        .trust-item h3 {
-            font-size: 1.1em;
-            color: #0f3b6b;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .trust-item p {
-            color: #666;
-            font-size: 0.9em;
-            line-height: 1.5;
-        }
-
-        /* Expertise Section */
-        .expertise-section {
-            background: linear-gradient(135deg, #f9f9f9 0%, #f5f5f5 100%);
-            padding: 80px 40px;
-        }
-
-        .expertise-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .expertise-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            transition: all 0.3s ease;
-            border-top: 3px solid #0f3b6b;
-        }
-
-        .expertise-card:hover {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transform: translateY(-4px);
-        }
-
-        .expertise-card h3 {
-            font-size: 1.3em;
-            color: #0f3b6b;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .expertise-card p {
-            color: #666;
-            font-size: 0.95em;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .expertise-card .subtext {
-            font-size: 0.85em;
-            color: #0f3b6b;
-            font-weight: 600;
-        }
-
-        /* Standards Section */
-        .standards-section {
-            background: white;
-            padding: 80px 40px;
-        }
-
-        .standards-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .standards-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .standard-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            border: 1px solid #eee;
-            transition: all 0.3s ease;
-        }
-
-        .standard-box:hover {
-            border-color: #0f3b6b;
-            background: #f0f5ff;
-        }
-
-        .standard-box .icon {
-            font-size: 2.5em;
-            margin-bottom: 12px;
-        }
-
-        .standard-box p {
-            font-size: 0.95em;
-            color: #0f3b6b;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        /* Why Choose Section */
-        .why-section {
-            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
-            color: white;
-            padding: 80px 40px;
-        }
-
-        .why-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .why-section h2 {
-            font-size: 2em;
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-
-        .why-item {
-            display: flex;
-            gap: 15px;
-        }
-
-        .why-item .number {
-            font-size: 2.5em;
-            font-weight: 700;
-            min-width: 60px;
-            opacity: 0.9;
-        }
-
-        .why-item h3 {
-            font-size: 1.2em;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .why-item p {
-            font-size: 0.95em;
-            line-height: 1.6;
-            opacity: 0.95;
-        }
-
-        /* CTA Section */
-        .final-cta {
-            background: white;
-            padding: 100px 40px;
-            text-align: center;
-        }
-
-        .final-cta .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .final-cta h2 {
-            font-size: 2.2em;
-            color: #0f3b6b;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .final-cta p {
-            font-size: 1.1em;
-            color: #666;
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-
-        .final-cta-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: #999;
-            padding: 60px 40px 30px;
-        }
-
-        footer .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            margin-bottom: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #333;
-        }
-
-        .footer-section h4 {
-            color: white;
-            margin-bottom: 15px;
-            font-weight: 600;
-            font-size: 0.95em;
-        }
-
-        .footer-section a,
-        .footer-section p {
-            display: block;
-            margin-bottom: 8px;
-            text-decoration: none;
-            color: #999;
-            font-size: 0.9em;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #0f3b6b;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            font-size: 0.85em;
-            color: #666;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            nav .container {
-                padding: 0 20px;
-            }
-
-            .hero .container {
-                grid-template-columns: 1fr;
-                padding: 0 20px;
-                gap: 40px;
-            }
-
-            .hero-content h1 {
-                font-size: 2.4em;
-            }
-
-            .trust-grid,
-            .standards-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .expertise-grid,
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                padding: 0 20px;
-            }
-
-            nav ul {
-                gap: 20px;
-            }
-
-            .hero {
-                padding-top: 100px;
-                padding-bottom: 50px;
-            }
-
-            .hero-content h1 {
-                font-size: 1.8em;
-            }
-
-            .hero-content p {
-                font-size: 1em;
-            }
-
-            .trust-grid,
-            .standards-grid,
-            .expertise-grid,
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .trust-section,
-            .expertise-section,
-            .standards-section,
-            .why-section,
-            .final-cta {
-                padding: 50px 20px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .final-cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-        }
-    </style>
+.hero .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+.hero-content {
+  max-width: 640px;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.45);
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: #e5e7eb;
+  margin-bottom: 40px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #0f3b6b;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+section {
+  padding: 90px 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.1rem;
+  color: #0f3b6b;
+  margin-bottom: 12px;
+}
+
+.section-header p {
+  color: #4b5563;
+}
+
+/* =====================
+   TRUST
+===================== */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+.trust-item {
+  text-align: center;
+}
+
+.trust-item h3 {
+  margin: 12px 0;
+  color: #0f3b6b;
+}
+
+/* =====================
+   SERVICES
+===================== */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 40px;
+}
+
+.expertise-card {
+  border: 1px solid #e5e7eb;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.expertise-card h3 {
+  color: #0f3b6b;
+  margin-bottom: 12px;
+}
+
+/* =====================
+   WHY US
+===================== */
+.why-section {
+  background: linear-gradient(135deg,#0f3b6b,#1a5fa0);
+  color: #ffffff;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 40px;
+}
+
+/* =====================
+   CTA
+===================== */
+.final-cta {
+  text-align: center;
+}
+
+.final-cta h2 {
+  color: #0f3b6b;
+  margin-bottom: 12px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #111827;
+  color: #9ca3af;
+  padding: 60px 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 40px;
+}
+
+footer h4 {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .trust-grid,
+  .expertise-grid,
+  .why-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+}
+</style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="index.html" class="logo">NeubiQ</a>
-            <ul>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="approach.html">Approach</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="btn-cta">Book Consultation</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Quality and Regulatory Excellence for Medical Device Manufacturers</h1>
-                <p>Strategic QMS design, AI/SaMD governance, and market authorization expertise. We help device makers navigate FDA, EU MDR, and India CDSCO with precision.</p>
-                <div class="hero-cta">
-                    <a href="contact.html" class="btn btn-primary">Start Your Assessment</a>
-                    <a href="services.html" class="btn btn-secondary">Explore Services</a>
-                </div>
-          </div>
-    </section>
+<nav>
+  <div class="container">
+    <a class="logo" href="index.html">NeubiQ</a>
+    <ul>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="approach.html">Approach</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="btn-cta" href="contact.html">Book Consultation</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <!-- Trust Section -->
-    <section class="trust-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Manufacturers Trust NeubiQ</h2>
-                <p>We combine regulatory expertise with hands-on execution. Not consultants who advise—partners who implement.</p>
-            </div>
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="icon">✓</div>
-                    <h3>Execution-Focused</h3>
-                    <p>We implement systems, not just recommend them. Audit-ready documentation on day one.</p>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">✓</div>
-                    <h3>AI/SaMD Experts</h3>
-                    <p>15+ AI-enabled device approvals. We speak software governance, ML validation, cybersecurity.</p>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">✓</div>
-                    <h3>Global Markets</h3>
-                    <p>FDA, EU MDR, India CDSCO. Strategic market selection, not just compliance checkbox.</p>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">✓</div>
-                    <h3>Audit-Ready</h3>
-                    <p>Every deliverable designed for inspector scrutiny. Zero surprises in audits.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Quality and Regulatory Excellence for Medical Device Manufacturers</h1>
+      <p>
+        Strategic QMS design, AI/SaMD governance, and market authorization expertise.
+        We help device makers navigate FDA, EU MDR, and India CDSCO with precision.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="contact.html">Start Your Assessment</a>
+        <a class="btn btn-secondary" href="services.html">Explore Services</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Expertise Section -->
-    <section class="expertise-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Core Services</h2>
-                <p>Tailored solutions for every stage of your device lifecycle</p>
-            </div>
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <h3>QMS Architecture</h3>
-                    <p>ISO 13485 and MDSAP-aligned Quality Management Systems designed for audit readiness and scalable regulatory operations. </p>
-                    <div class="subtext">→ Procedure/Format • Design History File • CAPA • Internal Audits</div>
-                </div>
-                <div class="expertise-card">
-                    <h3>AI & SaMD Governance</h3>
-                    <p>Specialized expertise for software-driven and AI-enabled medical devices. ISO 42001, IEC 62304, AI/ML validation, cybersecurity, and evolving regulatory pathways.</p>
-                    <div class="subtext">→ GMLP Alignment • Model Validation • Risk Management</div>
-                </div>
-                <div class="expertise-card">
-                    <h3>Market Authorization</h3>
-                    <p>Strategic regulatory and post-market support for global commercialization. From submission strategy through approval and sustained market presence.</p>
-                    <div class="subtext">→ FDA/EU Submissions • Clinical Strategy • Post-Market</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Standards Section -->
-    <section class="standards-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Standards & Markets We Serve</h2>
-            </div>
-            <div class="standards-grid">
-                <div class="standard-box">
-                    <div class="icon">✓</div>
-                    <p>ISO 13485</p>
-                </div>
-                <div class="standard-box">
-                    <div class="icon">✓</div>
-                    <p>FDA 510(k) & PMA</p>
-                </div>
-                <div class="standard-box">
-                    <div class="icon">✓</div>
-                    <p>EU MDR</p>
-                </div>
-                <div class="standard-box">
-                    <div class="icon">✓</div>
-                    <p>India CDSCO</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Section -->
-    <section class="why-section">
-        <div class="container">
-            <h2>What Sets Us Apart</h2>
-            <div class="why-grid">
-                <div class="why-item">
-                    <div class="number">100% </div>
-                    <div>
-                        <h3>Audit Readiness</h3>
-                        <p>Every system designed for regulatory scrutiny from day one.</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <div class="number">15+</div>
-                    <div>
-                        <h3>AI Device Approvals</h3>
-                        <p>Specialized expertise in software and AI-enabled medical device governance.</p>
-                    </div>
-                </div>
-                <div class="why-item">
-                    <div class="number">3x</div>
-                    <div>
-                        <h3>Market Coverage</h3>
-                        <p>FDA, EU MDR, and India CDSCO regulatory expertise under one roof.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Ready to Build Regulatory Excellence?</h2>
-            <p>Let's assess your current state and design a clear path to approval and global commercialization.</p>
-            <div class="final-cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Book Consultation</a>
-                <a href="approach.html" class="btn btn-secondary">Learn Our Approach</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <a href="services.html">QMS Architecture</a>
-                    <a href="services.html">AI & SaMD</a>
-                    <a href="services.html">Market Authorization</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <a href="approach.html">Our Approach</a>
-                    <a href="about.html">About Us</a>
-                    <a href="resources.html">Resources</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>info@neubiq.com</p>
-                    <p>regulatory@neubiq.com</p>
-                    <p>24-hour response</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Markets Served</h4>
-                    <p>🇺🇸 USA (FDA)</p>
-                    <p>🇪🇺 European Union</p>
-                    <p>🇮🇳 India (CDSCO)</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 NeubiQ MedCon Services. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>
-
-
