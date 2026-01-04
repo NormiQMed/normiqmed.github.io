@@ -1,94 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | NeubiQ MedCon Services</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About NeubiQ MedCon | Quality & Regulatory Enablement</title>
+    <style>
+        /* Same CSS structure as provided – unchanged */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+            border-bottom: 8px solid #ff9800;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.15em;
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.8;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 20px;
+            margin-top: 80px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.4em;
+            color: #0f3b6b;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.05em;
+            color: #666;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.9;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .principle-card {
+            background: #fafafa;
+            padding: 45px;
+            border-radius: 8px;
+            border-left: 5px solid #0f3b6b;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .principle-card h3 {
+            font-size: 1.3em;
+            color: #0f3b6b;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .principle-card p {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .advisory-section {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            text-align: center;
+            border-top: 8px solid #ff9800;
+            border-bottom: 8px solid #ff9800;
+        }
+
+        .advisory-section h2 {
+            color: white;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .advisory-section p {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .advisory-cta {
+            display: inline-block;
+            background: white;
+            color: #0f3b6b;
+            padding: 15px 35px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 60px 20px 30px;
+            text-align: center;
+            font-size: 0.9em;
+            border-top: 1px solid #333;
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
-  <div class="container">
-    <nav>
-      <strong>NeubiQ MedCon Services</strong>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="approach.html">Approach</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </div>
+    <h1>About NeubiQ MedCon</h1>
+    <p>
+        NeubiQ MedCon is a quality and regulatory enablement firm focused on
+        building operationally effective quality systems for regulated
+        medical device organizations.
+    </p>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <h1>About NeubiQ MedCon Services</h1>
-    <p>
-      NeubiQ MedCon Services is a specialized consulting firm focused exclusively
-      on Quality Management System (QMS) compliance for medical device manufacturers.
-      We support organizations across the full lifecycle — from early-stage startups
-      to established manufacturers expanding into global markets.
-    </p>
-  </div>
-</section>
-<!-- TRUST BAR -->
-<section class="trust-bar">
-  <h4>EXPERTISE ALIGNED WITH GLOBAL STANDARDS</h4>
-  <div class="trust-logos">
-    <img src="assets/iso13485.png" alt="ISO 13485">
-    <img src="assets/mdsap.png" alt="MDSAP">
-    <img src="assets/fda.png" alt="FDA">
-    <img src="assets/eumdr.png" alt="EU MDR">
-  </div>
+<section class="container">
+    <div class="section-header">
+        <h2>Our Perspective</h2>
+        <p>
+            Quality systems are not documentation artifacts. They are management systems.
+            Their effectiveness is measured by control, consistency, and sustainability —
+            not by certification alone.
+        </p>
+    </div>
 </section>
 
-<section class="section">
-  <div class="container card-grid">
-
-    <div class="card">
-      <h3>Our Focus</h3>
-      <p>
-        We work solely within the medical device domain, delivering QMS solutions
-        aligned with ISO 13485, MDSAP, and QMSR requirements. This exclusive focus
-        enables deep regulatory understanding and practical implementation.
-      </p>
+<section class="container">
+    <div class="section-header">
+        <h2>What We Do</h2>
+        <p>
+            We work with medical device organizations to establish and sustain
+            quality and regulatory systems that integrate seamlessly into
+            operational models and scale with organizational growth.
+        </p>
     </div>
 
-    <div class="card">
-      <h3>What We Deliver</h3>
-      <p>
-        Our consulting approach emphasizes audit-ready systems, not just documentation.
-        We design QMS frameworks that integrate seamlessly into daily operations and
-        stand up to regulatory scrutiny.
-      </p>
-    </div>
+    <div class="principles-grid">
+        <div class="principle-card">
+            <h3>Operational Integration</h3>
+            <p>
+                Quality systems are designed as part of the organization’s operating
+                model, enabling consistent execution across functions and lifecycle stages.
+            </p>
+        </div>
 
-    <div class="card">
-      <h3>AI-Enabled Medical Devices</h3>
-      <p>
-        Where applicable, we support QMS integration for AI-enabled medical devices
-        by aligning AI lifecycle controls — including data management, model validation,
-        change control, and monitoring — with ISO/IEC 42001 and ISO 13485 requirements.
-      </p>
-    </div>
+        <div class="principle-card">
+            <h3>Governance-Led Structure</h3>
+            <p>
+                Control is achieved through governance frameworks, role clarity,
+                and accountability — not document volume.
+            </p>
+        </div>
 
-    <div class="card">
-      <h3>Our Philosophy</h3>
-      <p>
-        We believe compliance should be structured, efficient, and sustainable.
-        Our work is guided by regulatory intent, risk-based thinking, and long-term
-        system effectiveness rather than short-term certification goals.
-      </p>
-    </div>
+        <div class="principle-card">
+            <h3>Inspection Readiness</h3>
+            <p>
+                System architecture and documentation are aligned with audit and
+                inspection expectations across applicable regulatory environments.
+            </p>
+        </div>
 
-  </div>
+        <div class="principle-card">
+            <h3>Scalability by Design</h3>
+            <p>
+                Quality systems are structured to remain effective as organizations
+                evolve, digitize, and expand into new markets.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="advisory-section">
+    <div class="container">
+        <h2>Our Role</h2>
+        <p>
+            NeubiQ MedCon operates as a long-term quality and regulatory partner,
+            supporting organizations beyond certification events and into
+            sustained operational maturity.
+        </p>
+        <a href="contact.html" class="advisory-cta">Engage With Our Team</a>
+    </div>
 </section>
 
 <footer>
-  NeubiQ MedCon Services © All rights reserved
+    <p>&copy; 2024 NeubiQ MedCon Services. All rights reserved.</p>
 </footer>
 
 </body>
