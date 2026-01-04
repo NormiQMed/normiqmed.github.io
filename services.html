@@ -15,28 +15,31 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #1a1a1a;
-            background: #fafafa;
+            background: #ffffff;
         }
 
         header {
             background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
             color: white;
-            padding: 60px 20px;
+            padding: 100px 20px 80px;
             text-align: center;
+            border-bottom: 8px solid #ff9800;
         }
 
         header h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 15px;
             font-weight: 700;
+            letter-spacing: -1px;
         }
 
         header p {
-            font-size: 1.1em;
+            font-size: 1.15em;
             opacity: 0.95;
             max-width: 800px;
             margin: 0 auto;
-            line-height: 1.7;
+            line-height: 1.8;
+            font-weight: 500;
         }
 
         .container {
@@ -46,33 +49,37 @@
         }
 
         section {
-            padding: 80px 20px;
+            padding: 100px 20px;
+            margin-top: 80px;
+            border-top: 1px solid #e0e0e0;
+            position: relative;
         }
 
+        /* Intro Section */
         .intro-section {
-            background: white;
+            background: #fafafa;
             text-align: center;
         }
 
         .intro-section h2 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
+            font-size: 2.4em;
+            margin-bottom: 20px;
             color: #0f3b6b;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .intro-section p {
             font-size: 1.05em;
             color: #666;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
-            line-height: 1.7;
+            line-height: 1.9;
         }
 
-        .secondary-line {
-            font-size: 1em;
-            color: #0f3b6b;
-            font-weight: 500;
-            margin-top: 12px;
+        /* Services Detail Section */
+        .services-section {
+            background: #ffffff;
         }
 
         .services-detailed {
@@ -83,16 +90,16 @@
         }
 
         .service-detailed-item {
-            background: white;
-            padding: 40px;
+            background: #ffffff;
+            padding: 45px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             border-left: 5px solid #0f3b6b;
             transition: all 0.3s ease;
         }
 
         .service-detailed-item:hover {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
             transform: translateY(-3px);
         }
 
@@ -100,29 +107,29 @@
             display: inline-block;
             background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             text-align: center;
-            line-height: 50px;
+            line-height: 55px;
             font-weight: bold;
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 8px rgba(15, 59, 107, 0.3);
+            font-size: 1.4em;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 12px rgba(15, 59, 107, 0.3);
         }
 
         .service-detailed-item h3 {
-            font-size: 1.6em;
+            font-size: 1.5em;
             color: #0f3b6b;
             margin-bottom: 15px;
             font-weight: 700;
         }
 
         .service-detailed-item > p {
-            font-size: 1.05em;
+            font-size: 1em;
             color: #666;
-            margin-bottom: 15px;
-            line-height: 1.7;
+            margin-bottom: 18px;
+            line-height: 1.8;
         }
 
         .differentiation {
@@ -130,7 +137,7 @@
             color: #0f3b6b;
             font-weight: 500;
             margin-bottom: 25px;
-            padding: 15px;
+            padding: 18px;
             background: #e8f0ff;
             border-left: 4px solid #0f3b6b;
             border-radius: 4px;
@@ -142,13 +149,13 @@
             color: #0f3b6b;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin: 20px 0 15px 0;
+            margin: 25px 0 15px 0;
         }
 
         .capabilities-list {
             list-style: none;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 12px;
         }
 
@@ -161,15 +168,18 @@
             font-size: 0.95em;
         }
 
+        /* Market Focus Section */
         .market-focus {
-            background: white;
+            background: #fafafa;
             text-align: center;
         }
 
         .market-focus h2 {
-            font-size: 1.8em;
+            font-size: 2.4em;
             margin-bottom: 30px;
             color: #0f3b6b;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .market-badges {
@@ -177,7 +187,7 @@
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .badge {
@@ -197,75 +207,89 @@
 
         .market-focus-text {
             color: #666;
-            font-size: 1em;
+            font-size: 1.05em;
             margin-top: 20px;
-            max-width: 700px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.7;
+            line-height: 1.9;
         }
 
+        /* Regional Expertise Section */
         .regional-expertise {
-            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            background: #ffffff;
         }
 
         .regional-expertise h2 {
             text-align: center;
-            font-size: 1.8em;
-            margin-bottom: 40px;
+            font-size: 2.4em;
+            margin-bottom: 50px;
             color: #0f3b6b;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .regional-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
 
         .regional-box {
-            background: white;
-            padding: 30px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
+            padding: 35px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border-left: 4px solid #0f3b6b;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid #0f3b6b;
+            transition: all 0.3s ease;
+        }
+
+        .regional-box:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
         }
 
         .regional-box h4 {
             color: #0f3b6b;
             margin-bottom: 12px;
             font-size: 1.15em;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .regional-box p {
             font-size: 0.95em;
             color: #666;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
+        /* How We Work Section */
         .how-we-work {
-            background: white;
+            background: #fafafa;
         }
 
         .how-we-work h2 {
-            font-size: 1.8em;
+            font-size: 2.4em;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             color: #0f3b6b;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .how-we-work > p {
             text-align: center;
             color: #666;
-            margin-bottom: 40px;
-            max-width: 600px;
+            margin-bottom: 50px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            font-size: 1.05em;
+            line-height: 1.9;
         }
 
         .process-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
@@ -273,109 +297,130 @@
         .step {
             position: relative;
             text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
         }
 
         .step-number {
             background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
             color: white;
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.4em;
-            margin: 0 auto 15px;
-            box-shadow: 0 4px 12px rgba(15, 59, 107, 0.25);
+            font-size: 1.5em;
+            margin: 0 auto 18px;
+            box-shadow: 0 4px 12px rgba(15, 59, 107, 0.35);
         }
 
         .step h4 {
             color: #0f3b6b;
-            margin-bottom: 10px;
-            font-weight: 600;
-            font-size: 1.05em;
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 1.1em;
         }
 
         .step p {
             color: #666;
-            font-size: 0.9em;
-            line-height: 1.5;
+            font-size: 0.95em;
+            line-height: 1.6;
         }
 
+        /* Which Service Section */
         .which-service {
-            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            background: #ffffff;
         }
 
         .which-service h2 {
             text-align: center;
-            font-size: 1.8em;
-            margin-bottom: 40px;
+            font-size: 2.4em;
+            margin-bottom: 50px;
             color: #0f3b6b;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .service-selector {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .selector-card {
-            background: white;
-            padding: 25px;
-            margin-bottom: 15px;
+            background: #fafafa;
+            padding: 30px;
+            margin-bottom: 18px;
             border-radius: 6px;
             cursor: pointer;
             transition: all 0.3s ease;
-            border-left: 4px solid #ddd;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 5px solid #ff9800;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .selector-card:hover {
-            background: #e8f0ff;
-            border-left-color: #0f3b6b;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #fff3cd;
+            border-left-color: #ff6f00;
+            box-shadow: 0 6px 16px rgba(255, 152, 0, 0.15);
+            transform: translateX(10px);
         }
 
         .selector-card h4 {
             color: #0f3b6b;
             margin-bottom: 8px;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.05em;
         }
 
         .selector-card p {
             font-size: 0.95em;
-            color: #666;
+            color: #ff6f00;
+            font-weight: 500;
         }
 
+        /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
             color: white;
             text-align: center;
+            border-top: 8px solid #ff9800;
+            border-bottom: 8px solid #ff9800;
         }
 
         .cta-section h2 {
-            font-size: 2em;
+            font-size: 2.4em;
             margin-bottom: 20px;
+            font-weight: 700;
         }
 
         .cta-section p {
             font-size: 1.1em;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             opacity: 0.95;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.8;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 14px 32px;
+            padding: 15px 35px;
             border-radius: 4px;
             font-weight: 600;
             font-size: 1em;
@@ -392,8 +437,8 @@
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
         }
 
         .btn-secondary {
@@ -411,8 +456,9 @@
             background: #1a1a1a;
             color: #999;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             font-size: 0.9em;
+            border-top: 1px solid #333;
         }
 
         @media (max-width: 768px) {
@@ -420,12 +466,22 @@
                 font-size: 1.8em;
             }
 
-            .service-detailed-item {
-                padding: 30px;
+            section {
+                padding: 60px 20px;
+                margin-top: 50px;
             }
 
-            .service-detailed-item h3 {
-                font-size: 1.3em;
+            .intro-section h2,
+            .market-focus h2,
+            .regional-expertise h2,
+            .how-we-work h2,
+            .which-service h2,
+            .cta-section h2 {
+                font-size: 1.8em;
+            }
+
+            .service-detailed-item {
+                padding: 30px;
             }
 
             .capabilities-list {
@@ -434,7 +490,11 @@
 
             .market-badges {
                 flex-direction: column;
-                gap: 10px;
+                gap: 12px;
+            }
+
+            .badge {
+                display: block;
             }
 
             .process-steps {
@@ -451,6 +511,10 @@
 
             .regional-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .selector-card:hover {
+                transform: translateX(5px);
             }
         }
     </style>
@@ -469,7 +533,7 @@
     </section>
 
     <!-- Services Detail Section -->
-    <section class="container">
+    <section class="services-section container">
         <div class="services-detailed">
             <!-- Service 1 -->
             <div class="service-detailed-item">
