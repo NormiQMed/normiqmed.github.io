@@ -370,11 +370,10 @@ section {
 .final-cta {
   background: #ffffff;
   text-align: center;
-}
-
-.final-cta .container {
-  max-width: 900px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .final-cta h2 {
@@ -383,6 +382,7 @@ section {
   margin-bottom: 20px;
   font-weight: 700;
   letter-spacing: -0.5px;
+  max-width: 900px;
 }
 
 .final-cta p {
@@ -391,8 +391,6 @@ section {
   margin-bottom: 40px;
   line-height: 1.8;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .final-cta-buttons {
@@ -400,8 +398,7 @@ section {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 /* Footer */
@@ -691,13 +688,11 @@ footer .container {
 
     <!-- Final CTA Section -->
     <section class="final-cta">
-        <div class="container">
-            <h2>Ready to Build Operational Quality Systems?</h2>
-            <p>Let's assess your current state and design regulatory and quality system frameworks that support execution discipline, inspection readiness, and sustained compliance.</p>
-            <div class="final-cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Start Your Assessment</a>
-                <a href="approach.html" class="btn btn-secondary">Learn Our Approach</a>
-            </div>
+        <h2>Ready to Build Operational Quality Systems?</h2>
+        <p>Let's assess your current state and design regulatory and quality system frameworks that support execution discipline, inspection readiness, and sustained compliance.</p>
+        <div class="final-cta-buttons">
+            <a href="contact.html" class="btn btn-primary">Start Your Assessment</a>
+            <a href="approach.html" class="btn btn-secondary">Learn Our Approach</a>
         </div>
     </section>
 
