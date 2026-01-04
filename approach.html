@@ -12,31 +12,34 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: #1a1a1a;
-            background: #fafafa;
+            background: #ffffff;
         }
 
         header {
             background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
             color: white;
-            padding: 80px 20px 60px;
+            padding: 100px 20px 80px;
             text-align: center;
+            border-bottom: 8px solid #ff9800;
         }
 
         header h1 {
-            font-size: 2.8em;
+            font-size: 3em;
             margin-bottom: 15px;
             font-weight: 700;
+            letter-spacing: -1px;
         }
 
         header p {
-            font-size: 1.15em;
+            font-size: 1.25em;
             opacity: 0.95;
-            max-width: 750px;
+            max-width: 800px;
             margin: 0 auto;
-            line-height: 1.7;
+            line-height: 1.8;
+            font-weight: 500;
         }
 
         .container {
@@ -46,308 +49,311 @@
         }
 
         section {
-            padding: 80px 20px;
+            padding: 100px 20px;
+            margin-top: 80px;
+            border-top: 1px solid #e0e0e0;
+            position: relative;
         }
 
-        /* Core Philosophy Section */
+        section::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 60px;
+            background: linear-gradient(to bottom, #0f3b6b, transparent);
+            opacity: 0;
+        }
+
+        /* Philosophy Section */
         .philosophy-section {
-            background: white;
-            text-align: center;
+            background: #fafafa;
         }
 
         .philosophy-section h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
+            font-size: 2.2em;
+            margin-bottom: 30px;
             color: #0f3b6b;
+            font-weight: 700;
         }
 
         .philosophy-intro {
-            font-size: 1.1em;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.8;
+            font-size: 1.05em;
+            color: #555;
+            max-width: 850px;
+            margin: 0 auto 45px;
+            line-height: 1.9;
         }
 
         .philosophy-statement {
-            background: #e8f0ff;
-            border-left: 5px solid #0f3b6b;
-            padding: 30px;
+            background: linear-gradient(135deg, #e8f0ff 0%, #f0f5ff 100%);
+            border-left: 6px solid #0f3b6b;
+            padding: 35px;
             border-radius: 6px;
-            font-size: 1.05em;
+            font-size: 1.1em;
             color: #0f3b6b;
             font-weight: 500;
-            margin-bottom: 40px;
-            max-width: 800px;
+            margin-bottom: 35px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.8;
+            line-height: 1.85;
         }
 
         .core-principle {
-            background: #f9f9f9;
-            padding: 30px;
+            background: #ffffff;
+            padding: 35px;
             border-radius: 6px;
-            border: 1px solid #eee;
+            border: 2px solid #0f3b6b;
             margin-top: 20px;
             font-size: 1em;
-            color: #555;
-            line-height: 1.7;
-            max-width: 800px;
+            color: #333;
+            line-height: 1.8;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* Five-Stage Model Section */
+        .core-principle strong {
+            color: #0f3b6b;
+            font-weight: 600;
+        }
+
+        /* Model Section */
         .model-section {
-            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            background: #ffffff;
         }
 
         .model-section h2 {
-            font-size: 2em;
+            font-size: 2.2em;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             color: #0f3b6b;
+            font-weight: 700;
         }
 
         .model-intro {
             text-align: center;
             font-size: 1.05em;
             color: #666;
-            margin-bottom: 60px;
-            max-width: 700px;
+            margin-bottom: 70px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.7;
+            line-height: 1.85;
         }
 
         .stages-timeline {
+            position: relative;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
             margin-top: 60px;
+            max-width: 1500px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .stage-item {
             position: relative;
-            background: white;
-            padding: 35px;
+            background: #ffffff;
+            padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border-left: 5px solid #0f3b6b;
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 5px solid #0f3b6b;
+            transition: all 0.4s ease;
         }
 
         .stage-item:hover {
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+            transform: translateY(-6px);
         }
 
         .stage-number {
             display: inline-block;
             background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             text-align: center;
-            line-height: 50px;
-            font-weight: bold;
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 8px rgba(15, 59, 107, 0.3);
+            line-height: 55px;
+            font-weight: 700;
+            font-size: 1.5em;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 12px rgba(15, 59, 107, 0.35);
         }
 
         .stage-item h3 {
-            font-size: 1.4em;
+            font-size: 1.3em;
             color: #0f3b6b;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             font-weight: 700;
         }
 
         .stage-item > p {
             color: #666;
-            margin-bottom: 15px;
-            font-size: 0.95em;
-            line-height: 1.7;
+            margin-bottom: 18px;
+            font-size: 0.97em;
+            line-height: 1.75;
         }
 
         .stage-focus {
-            background: #e8f0ff;
+            background: #f5f9ff;
             border-left: 4px solid #0f3b6b;
-            padding: 12px 15px;
+            padding: 15px 18px;
             border-radius: 4px;
-            margin-top: 15px;
+            margin-top: 18px;
             font-size: 0.9em;
             color: #0f3b6b;
+            font-weight: 500;
         }
 
         .focus-list {
             list-style: none;
             padding-left: 0;
-            margin-top: 10px;
+            margin-top: 12px;
         }
 
         .focus-list li {
-            padding: 5px 0;
-            padding-left: 20px;
+            padding: 7px 0;
+            padding-left: 22px;
             position: relative;
             font-size: 0.9em;
-            color: #0f3b6b;
+            color: #555;
+            line-height: 1.6;
         }
 
         .focus-list li:before {
-            content: "•";
+            content: "▸";
             position: absolute;
             left: 0;
+            color: #0f3b6b;
             font-weight: bold;
+            font-size: 1.1em;
         }
 
         /* Why This Works Section */
         .why-works {
-            background: white;
-            text-align: center;
+            background: #fafafa;
         }
 
         .why-works h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
+            font-size: 2.2em;
+            margin-bottom: 25px;
             color: #0f3b6b;
+            font-weight: 700;
         }
 
         .why-works-intro {
             font-size: 1.05em;
             color: #666;
-            max-width: 700px;
-            margin: 0 auto 50px;
-            line-height: 1.7;
-        }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 50px;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .comparison-column h3 {
-            font-size: 1.3em;
-            color: #0f3b6b;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .comparison-column.traditional h3 {
-            color: #d9534f;
-        }
-
-        .comparison-column.neubiQ h3 {
-            color: #0f3b6b;
-        }
-
-        .comparison-item {
-            padding: 15px;
-            margin-bottom: 12px;
-            border-radius: 6px;
-            font-size: 0.95em;
-            line-height: 1.6;
-        }
-
-        .comparison-column.traditional .comparison-item {
-            background: #ffebee;
-            color: #666;
-            border-left: 4px solid #d9534f;
-        }
-
-        .comparison-column.neubiQ .comparison-item {
-            background: #e8f0ff;
-            color: #0f3b6b;
-            border-left: 4px solid #0f3b6b;
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.9;
         }
 
         /* Outcomes Section */
         .outcomes-section {
-            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            background: #ffffff;
         }
 
         .outcomes-section h2 {
-            font-size: 2em;
+            font-size: 2.2em;
             text-align: center;
             margin-bottom: 50px;
             color: #0f3b6b;
+            font-weight: 700;
         }
 
         .outcomes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .outcome-card {
-            background: white;
-            padding: 30px;
+            background: #ffffff;
+            padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #0f3b6b;
             text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .outcome-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
         }
 
         .outcome-card .icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
+            font-size: 2.8em;
+            margin-bottom: 18px;
         }
 
         .outcome-card h4 {
             font-size: 1.2em;
             color: #0f3b6b;
             margin-bottom: 12px;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .outcome-card p {
             color: #666;
             font-size: 0.95em;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         /* What We Avoid Section */
         .avoid-section {
-            background: white;
-            text-align: center;
+            background: #fafafa;
         }
 
         .avoid-section h2 {
-            font-size: 2em;
-            margin-bottom: 30px;
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 50px;
             color: #0f3b6b;
+            font-weight: 700;
         }
 
         .avoid-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .avoid-item {
-            background: #fff3cd;
-            border-left: 4px solid #ff9800;
-            padding: 25px;
+            background: #fff8f0;
+            border-left: 5px solid #ff9800;
+            padding: 35px;
             border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .avoid-item:hover {
+            box-shadow: 0 8px 20px rgba(255, 152, 0, 0.15);
+            transform: translateY(-4px);
         }
 
         .avoid-item h4 {
             color: #ff6f00;
-            margin-bottom: 8px;
-            font-weight: 600;
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 1.1em;
         }
 
         .avoid-item p {
             color: #666;
-            font-size: 0.9em;
-            line-height: 1.6;
+            font-size: 0.95em;
+            line-height: 1.7;
         }
 
         /* CTA Section */
@@ -355,32 +361,34 @@
             background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            border-top: 8px solid #ff9800;
         }
 
         .cta-final h2 {
-            font-size: 2em;
+            font-size: 2.2em;
             margin-bottom: 20px;
+            font-weight: 700;
         }
 
         .cta-final p {
             font-size: 1.1em;
-            margin-bottom: 30px;
-            max-width: 600px;
+            margin-bottom: 40px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.7;
+            line-height: 1.8;
+            opacity: 0.95;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 14px 32px;
+            padding: 15px 35px;
             border-radius: 4px;
             font-weight: 600;
             font-size: 1em;
@@ -397,8 +405,8 @@
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
         }
 
         .btn-secondary {
@@ -416,18 +424,39 @@
             background: #1a1a1a;
             color: #999;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             font-size: 0.9em;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 1200px) {
+            .stages-timeline {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .stage-item:nth-child(4) {
+                grid-column: 1 / 2;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
+
+            .stage-item:nth-child(5) {
+                grid-column: 2 / 3;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
         }
 
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.8em;
+                font-size: 2em;
             }
 
-            .comparison-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
+            section {
+                padding: 60px 20px;
+                margin-top: 50px;
             }
 
             .stages-timeline,
@@ -455,25 +484,23 @@
 
     <!-- Philosophy Section -->
     <section class="philosophy-section container">
-    <h2>The Compliance Failure Pattern</h2>
-    <p class="philosophy-intro">
-        Regulatory failures rarely stem from missing documents. They originate from misaligned operating models,
-        unmanaged risk pathways, and control systems designed for audits rather than execution.
-    </p>
-    <div class="philosophy-statement">
-        NeubiQ MedCon approaches regulatory compliance as an operating-system design challenge — not a documentation exercise.
-    </div>
-    <div class="core-principle">
-        <strong>Core Principle:</strong> Sustainable compliance is the outcome of disciplined system architecture,
-        risk governance, and evidence-based execution.
-    </div>
-</section>
+        <h2>The Challenge in Medical Device Compliance</h2>
+        <p class="philosophy-intro">
+            Medical device compliance failures rarely originate from missing documents. They originate from misaligned operating models, unmanaged risk pathways, and poorly designed control systems. Traditional compliance methodologies treat regulatory requirements as a documentation exercise, disconnected from operational reality.
+        </p>
+        <div class="philosophy-statement">
+            At NeubiQ MedCon, we approach regulatory compliance as a system design and execution challenge—not as a documentation exercise or audit-driven activity.
+        </div>
+        <div class="core-principle">
+            <strong>Core Principle:</strong> Compliance emerges as a natural outcome of disciplined architecture, structured risk governance, and evidence-based execution integrated into organizational operations—not as a parallel compliance function.
+        </div>
+    </section>
 
     <!-- Model Section -->
     <section class="model-section container">
-        <h2>Our Model: Risk-First Compliance Architecture</h2>
+        <h2>Our Five-Stage Risk-First Model</h2>
         <p class="model-intro">
-            Sustainable compliance emerges from well-designed systems, not from checklist remediation. We apply a structured, five-stage model that integrates regulatory intent, business context, and risk management into a coherent operating framework.
+            Sustainable compliance emerges from well-designed systems, not from checklist remediation. We apply a structured methodology that integrates regulatory intent, business context, and risk management into a coherent operating framework.
         </p>
 
         <div class="stages-timeline">
@@ -481,9 +508,9 @@
             <div class="stage-item">
                 <div class="stage-number">1</div>
                 <h3>Regulatory Context & Operating Intent</h3>
-                <p>Engagements begin with alignment on regulatory intent and operational reality.</p>
+                <p>We establish a clear regulatory baseline tailored to your organizational context.</p>
                 <div class="stage-focus">
-                    <strong>We assess:</strong>
+                    <strong>Assessment Focus:</strong>
                     <ul class="focus-list">
                         <li>Product classification and risk profile</li>
                         <li>Target markets and applicable regulatory regimes</li>
@@ -497,9 +524,9 @@
             <div class="stage-item">
                 <div class="stage-number">2</div>
                 <h3>Risk & Failure Mode Analysis</h3>
-                <p>Rather than enumerating clause-level gaps, we assess systemic vulnerabilities.</p>
+                <p>We identify systemic vulnerabilities before they create regulatory exposure.</p>
                 <div class="stage-focus">
-                    <strong>We analyze:</strong>
+                    <strong>Analysis Focus:</strong>
                     <ul class="focus-list">
                         <li>Where compliance risk originates</li>
                         <li>How failures propagate across processes</li>
@@ -513,9 +540,9 @@
             <div class="stage-item">
                 <div class="stage-number">3</div>
                 <h3>Compliance Architecture & Control Design</h3>
-                <p>Based on risk profile, we design a compliance architecture that integrates.</p>
+                <p>We design systems that produce compliance through normal operations.</p>
                 <div class="stage-focus">
-                    <strong>We create:</strong>
+                    <strong>Design Focus:</strong>
                     <ul class="focus-list">
                         <li>Quality management system structure</li>
                         <li>Process interfaces and ownership models</li>
@@ -529,7 +556,7 @@
             <div class="stage-item">
                 <div class="stage-number">4</div>
                 <h3>Targeted Remediation & Evidence Development</h3>
-                <p>Remediation efforts are prioritized and proportional, focusing on high-impact risks.</p>
+                <p>We prioritize high-impact compliance risks with proportional remediation.</p>
                 <div class="stage-focus">
                     <strong>Documentation is:</strong>
                     <ul class="focus-list">
@@ -545,9 +572,9 @@
             <div class="stage-item">
                 <div class="stage-number">5</div>
                 <h3>Validation, Readiness & Organizational Transfer</h3>
-                <p>The final phase ensures the system functions independently and predictably.</p>
+                <p>We ensure independent, predictable system performance and sustainability.</p>
                 <div class="stage-focus">
-                    <strong>We ensure:</strong>
+                    <strong>Validation Focus:</strong>
                     <ul class="focus-list">
                         <li>Internal audit simulation and stress testing</li>
                         <li>Inspection readiness assessment</li>
@@ -563,77 +590,56 @@
     <section class="why-works container">
         <h2>Why This Approach Delivers Superior Outcomes</h2>
         <p class="why-works-intro">
-            Traditional compliance models emphasize gap closure. Our model emphasizes risk governance and system integrity. This distinction drives dramatically different outcomes.
+            Our model emphasizes risk governance and system integrity over compliance documentation. Organizations that adopt this approach experience reduced regulatory exposure, fewer audit-driven surprises, clear accountability structures, and compliance frameworks that scale with organizational growth. This methodology aligns regulatory obligations with business execution, treating compliance as an operating discipline rather than a parallel activity.
         </p>
-
-        <div class="comparison-grid">
-            <div class="comparison-column traditional">
-                <h3>Traditional Approach</h3>
-                <div class="comparison-item">Checklist-driven remediation</div>
-                <div class="comparison-item">Document-heavy, low-usability systems</div>
-                <div class="comparison-item">Audit-only compliance design</div>
-                <div class="comparison-item">Generic, one-size-fits-all frameworks</div>
-                <div class="comparison-item">Consultant-dependent execution</div>
-                <div class="comparison-item">Compliance as parallel activity</div>
-            </div>
-            <div class="comparison-column neubiQ">
-                <h3>Our Approach</h3>
-                <div class="comparison-item">Risk-first architecture design</div>
-                <div class="comparison-item">Operationally integrated systems</div>
-                <div class="comparison-item">Inspection readiness built-in</div>
-                <div class="comparison-item">Context-specific, tailored frameworks</div>
-                <div class="comparison-item">Organizational self-sufficiency</div>
-                <div class="comparison-item">Compliance as operating discipline</div>
-            </div>
-        </div>
     </section>
 
     <!-- Outcomes Section -->
     <section class="outcomes-section container">
-        <h2>Organizations Benefit From</h2>
+        <h2>Expected Outcomes</h2>
         <div class="outcomes-grid">
             <div class="outcome-card">
                 <div class="icon">🛡️</div>
                 <h4>Reduced Regulatory Exposure</h4>
-                <p>Proactive risk management eliminates surprises and accelerates approvals.</p>
+                <p>Proactive risk identification and management eliminate regulatory surprises and accelerate market approvals.</p>
             </div>
             <div class="outcome-card">
                 <div class="icon">✓</div>
-                <h4>Fewer Audit-Driven Surprises</h4>
-                <p>Inspection readiness is built into the system, not bolted on at audit time.</p>
+                <h4>Eliminated Audit Surprises</h4>
+                <p>Inspection readiness is architected into system design, not retrofitted at audit time.</p>
             </div>
             <div class="outcome-card">
                 <div class="icon">📋</div>
                 <h4>Clear Accountability</h4>
-                <p>Defined ownership and decision pathways eliminate ambiguity and delays.</p>
+                <p>Defined ownership structures and decision pathways eliminate ambiguity and execution delays.</p>
             </div>
             <div class="outcome-card">
                 <div class="icon">📈</div>
-                <h4>Scalable Compliance Frameworks</h4>
-                <p>Systems grow with your organization without requiring complete rebuilds.</p>
+                <h4>Scalable Compliance Systems</h4>
+                <p>Framework designs accommodate organizational growth without requiring complete system rebuilds.</p>
             </div>
         </div>
     </section>
 
     <!-- What We Avoid Section -->
     <section class="avoid-section container">
-        <h2>What This Approach Explicitly Avoids</h2>
+        <h2>What We Explicitly Avoid</h2>
         <div class="avoid-grid">
             <div class="avoid-item">
                 <h4>Checklist-Driven Remediation</h4>
-                <p>We don't treat compliance as a compliance as a series of checkboxes to fill. Risk-based prioritization guides all work.</p>
+                <p>Compliance is not a series of checkboxes. Risk-based prioritization drives all engagement activities and resource allocation.</p>
             </div>
             <div class="avoid-item">
                 <h4>Document-Heavy Systems</h4>
-                <p>Over-documentation creates burden without value. We focus on necessary, sufficient, verifiable evidence.</p>
+                <p>Over-documentation creates organizational burden without regulatory value. We focus on necessary, sufficient, and verifiable evidence.</p>
             </div>
             <div class="avoid-item">
-                <h4>Audit-Only Design</h4>
-                <p>Systems must function operationally first. Audit readiness is a natural outcome of good design, not the primary objective.</p>
+                <h4>Audit-Only Compliance Design</h4>
+                <p>Systems must function operationally first. Audit readiness is a natural outcome of good system design, not the primary objective.</p>
             </div>
             <div class="avoid-item">
                 <h4>Generic Frameworks</h4>
-                <p>One-size-fits-all approaches fail. We tailor every engagement to your product, market, and organizational context.</p>
+                <p>One-size-fits-all approaches fail. We tailor every engagement to your product classification, market strategy, and organizational context.</p>
             </div>
         </div>
     </section>
@@ -641,8 +647,8 @@
     <!-- Final CTA -->
     <section class="cta-final">
         <div class="container">
-            <h2>Ready to Build Systems That Scale?</h2>
-            <p>Let's transform your regulatory approach from reactive compliance to proactive risk governance.</p>
+            <h2>Build Regulatory Systems That Scale</h2>
+            <p>Transform your approach from reactive compliance to proactive risk governance. Let's assess your current state and design a regulatory framework aligned to your market strategy.</p>
             <div class="cta-buttons">
                 <a href="contact.html" class="btn btn-primary">Start Your Assessment</a>
                 <a href="services.html" class="btn btn-secondary">Explore Our Services</a>
