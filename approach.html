@@ -148,64 +148,68 @@
         .stages-timeline {
             position: relative;
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 25px;
+            grid-template-columns: 1fr;
+            gap: 50px;
             margin-top: 60px;
-            max-width: 1500px;
+            max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .stage-item {
-            position: relative;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-top: 5px solid #0f3b6b;
-            transition: all 0.4s ease;
+        .stages-timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #0f3b6b 0%, #0f3b6b 50%, transparent 100%);
+            z-index: 0;
         }
 
-        .stage-item:hover {
-            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-            transform: translateY(-6px);
+        .stage-item {
+            position: relative;
+            padding-left: 120px;
+            z-index: 1;
         }
 
         .stage-number {
-            display: inline-block;
+            position: absolute;
+            left: -9px;
+            top: 0;
             background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
             color: white;
-            width: 55px;
-            height: 55px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             text-align: center;
-            line-height: 55px;
+            line-height: 70px;
             font-weight: 700;
-            font-size: 1.5em;
-            margin-bottom: 18px;
-            box-shadow: 0 4px 12px rgba(15, 59, 107, 0.35);
+            font-size: 1.6em;
+            box-shadow: 0 4px 15px rgba(15, 59, 107, 0.4);
+            border: 5px solid #ffffff;
         }
 
         .stage-item h3 {
-            font-size: 1.3em;
+            font-size: 1.35em;
             color: #0f3b6b;
-            margin-bottom: 18px;
+            margin-bottom: 12px;
             font-weight: 700;
         }
 
         .stage-item > p {
             color: #666;
-            margin-bottom: 18px;
-            font-size: 0.97em;
+            margin-bottom: 20px;
+            font-size: 0.98em;
             line-height: 1.75;
         }
 
         .stage-focus {
-            background: #f5f9ff;
+            background: transparent;
             border-left: 4px solid #0f3b6b;
-            padding: 15px 18px;
-            border-radius: 4px;
-            margin-top: 18px;
+            padding: 0 0 0 20px;
+            border-radius: 0;
+            margin-top: 0;
             font-size: 0.9em;
             color: #0f3b6b;
             font-weight: 500;
@@ -218,8 +222,8 @@
         }
 
         .focus-list li {
-            padding: 7px 0;
-            padding-left: 22px;
+            padding: 6px 0;
+            padding-left: 20px;
             position: relative;
             font-size: 0.9em;
             color: #555;
@@ -227,12 +231,11 @@
         }
 
         .focus-list li:before {
-            content: "▸";
+            content: "–";
             position: absolute;
             left: 0;
             color: #0f3b6b;
             font-weight: bold;
-            font-size: 1.1em;
         }
 
         /* Why This Works Section */
@@ -431,21 +434,11 @@
 
         @media (max-width: 1200px) {
             .stages-timeline {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: 1fr;
             }
 
-            .stage-item:nth-child(4) {
-                grid-column: 1 / 2;
-                margin-left: auto;
-                margin-right: auto;
-                width: 100%;
-            }
-
-            .stage-item:nth-child(5) {
-                grid-column: 2 / 3;
-                margin-left: auto;
-                margin-right: auto;
-                width: 100%;
+            .stage-item {
+                padding-left: 120px;
             }
         }
 
@@ -459,7 +452,25 @@
                 margin-top: 50px;
             }
 
-            .stages-timeline,
+            .stages-timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .stages-timeline::before {
+                left: 20px;
+            }
+
+            .stage-number {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                font-size: 1.3em;
+            }
+
+            .stage-item {
+                padding-left: 100px;
+            }
+
             .outcomes-grid,
             .avoid-grid {
                 grid-template-columns: 1fr;
