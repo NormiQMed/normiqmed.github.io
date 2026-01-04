@@ -1,121 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resources | NeubiQ MedCon Services</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Insights | NeubiQ MedCon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+            border-bottom: 8px solid #ff9800;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.15em;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 20px;
+            margin-top: 80px;
+            border-top: 1px solid #e0e0e0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.4em;
+            color: #0f3b6b;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .section-header p {
+            font-size: 1.05em;
+            color: #666;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.9;
+        }
+
+        /* Hero/Intro Section */
+        .intro-section {
+            background: #fafafa;
+            text-align: center;
+        }
+
+        .intro-section .section-header p {
+            color: #555;
+            font-weight: 500;
+        }
+
+        .micro-statement {
+            font-size: 0.9em;
+            color: #0f3b6b;
+            font-weight: 500;
+            margin-top: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Regulatory Intelligence Section */
+        .intelligence-section {
+            background: #ffffff;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 60px;
+        }
+
+        .insight-card {
+            background: #fafafa;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid #0f3b6b;
+            transition: all 0.3s ease;
+        }
+
+        .insight-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+
+        .insight-category {
+            font-size: 0.8em;
+            color: #0f3b6b;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .insight-card h3 {
+            font-size: 1.25em;
+            color: #0f3b6b;
+            margin-bottom: 12px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .insight-description {
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .insight-link {
+            display: inline-block;
+            color: #0f3b6b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+        }
+
+        .insight-link:hover {
+            color: #ff9800;
+        }
+
+        .view-all-btn {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .view-all-link {
+            display: inline-block;
+            color: #0f3b6b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            padding: 12px 30px;
+            border: 2px solid #0f3b6b;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .view-all-link:hover {
+            background: #0f3b6b;
+            color: white;
+        }
+
+        /* Accelerators Section */
+        .accelerators-section {
+            background: #fafafa;
+        }
+
+        .accelerators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .accelerator-card {
+            background: #ffffff;
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            border-top: 5px solid #0f3b6b;
+            transition: all 0.3s ease;
+        }
+
+        .accelerator-card:hover {
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+        }
+
+        .accelerator-card h3 {
+            font-size: 1.35em;
+            color: #0f3b6b;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .accelerator-section-label {
+            font-size: 0.85em;
+            color: #0f3b6b;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .accelerator-section-title {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+
+        .accelerator-content {
+            margin-bottom: 25px;
+        }
+
+        .accelerator-content p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .accelerator-includes {
+            background: #f5f5f5;
+            padding: 15px;
+            border-left: 3px solid #0f3b6b;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .accelerator-includes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .accelerator-includes li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .accelerator-includes li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0f3b6b;
+            font-weight: bold;
+        }
+
+        .accelerator-trust {
+            font-size: 0.85em;
+            color: #0f3b6b;
+            font-style: italic;
+            margin-bottom: 20px;
+            padding: 12px;
+            background: #e8f0ff;
+            border-left: 3px solid #0f3b6b;
+            border-radius: 3px;
+        }
+
+        .accelerator-cta {
+            display: inline-block;
+            background: #0f3b6b;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+        }
+
+        .accelerator-cta:hover {
+            background: #1a5fa0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(15, 59, 107, 0.3);
+        }
+
+        /* Advisory Bridge Section */
+        .advisory-section {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            text-align: center;
+            border-top: 8px solid #ff9800;
+            border-bottom: 8px solid #ff9800;
+        }
+
+        .advisory-section h2 {
+            color: white;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .advisory-section p {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .advisory-cta {
+            display: inline-block;
+            background: white;
+            color: #0f3b6b;
+            padding: 15px 35px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .advisory-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 60px 20px 30px;
+            text-align: center;
+            font-size: 0.9em;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            section {
+                padding: 60px 20px;
+                margin-top: 50px;
+            }
+
+            .section-header h2 {
+                font-size: 1.8em;
+            }
+
+            .insights-grid,
+            .accelerators-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .advisory-section h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <h1>Resources & Insights</h1>
+        <p>Regulatory Intelligence & Practical Frameworks</p>
+    </header>
 
-<header>
-  <div class="container">
-    <nav>
-      <strong>NeubiQ MedCon Services</strong>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="approach.html">Approach</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
+    <!-- Intro Section -->
+    <section class="intro-section container">
+        <div class="section-header">
+            <h2>Expert Guidance, Not Training Content</h2>
+            <p>Curated insights, frameworks, and compliance accelerators built from real medical device regulatory engagements. Designed for manufacturers, founders, and regulatory leaders—not generic learning platforms.</p>
+            <div class="micro-statement">
+                Intelligence sourced from audit rooms, submission reviews, and real-world compliance challenges.
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
-  <div class="container">
-    <h1>Resources</h1>
-    <p>
-      Access practical templates, checklists, and guidance documents designed
-      to support Quality Management System implementation and maintenance for
-      medical device manufacturers.
-    </p>
-  </div>
-</section>
+    <!-- Regulatory Intelligence Section -->
+    <section class="intelligence-section container">
+        <div class="section-header">
+            <h2>Regulatory Intelligence</h2>
+            <p>Opinionated analysis and practical insights on medical device regulations, audits, and emerging compliance risks.</p>
+        </div>
 
-<section class="section">
-  <div class="container">
+        <div class="insights-grid">
+            <div class="insight-card">
+                <div class="insight-category">Audit Readiness & Failures</div>
+                <h3>Why Most ISO 13485 Systems Fail During Notified Body Audits</h3>
+                <p class="insight-description">A practical look at recurring gaps we see during real audits—and how to fix them before the inspector arrives.</p>
+                <a href="#" class="insight-link">Read Insight →</a>
+            </div>
 
-    <h2 style="margin-bottom:20px;">Free Resources</h2>
+            <div class="insight-card">
+                <div class="insight-category">AI, SaMD & Software</div>
+                <h3>AI Medical Devices: Where GMLP Strategies Break Down</h3>
+                <p class="insight-description">Why most AI compliance plans collapse during validation and what regulators actually expect from governance frameworks.</p>
+                <a href="#" class="insight-link">Read Insight →</a>
+            </div>
 
-    <div class="card-grid">
+            <div class="insight-card">
+                <div class="insight-category">EU MDR / Regulatory Changes</div>
+                <h3>PMS Under EU MDR: What Auditors Expect vs What Companies Do</h3>
+                <p class="insight-description">Bridging the expectation gap between post-market surveillance regulations and actual implementation—a major source of nonconformities.</p>
+                <a href="#" class="insight-link">Read Insight →</a>
+            </div>
 
-      <div class="card">
-        <h3>ISO 13485 Gap Assessment Checklist</h3>
-        <p>
-          A structured checklist to assess your current QMS against ISO 13485
-          requirements and identify priority gaps.
-        </p>
-        <p style="margin-top:10px; color:#b0b6c2;">
-          Format: PDF / Excel
-        </p>
-      </div>
+            <div class="insight-card">
+                <div class="insight-category">Quality System Execution</div>
+                <h3>From Documentation to Operations: Making Your QMS Actually Work</h3>
+                <p class="insight-description">How to transition from compliance paperwork to an operational quality system that scales with your organization.</p>
+                <a href="#" class="insight-link">Read Insight →</a>
+            </div>
+        </div>
 
-      <div class="card">
-        <h3>QMS Documentation Index</h3>
-        <p>
-          A high-level index outlining required and recommended QMS documents
-          for medical device manufacturers.
-        </p>
-        <p style="margin-top:10px; color:#b0b6c2;">
-          Format: Excel
-        </p>
-      </div>
+        <div class="view-all-btn">
+            <a href="#" class="view-all-link">View All Regulatory Insights</a>
+        </div>
+    </section>
 
-      <div class="card">
-        <h3>Internal Audit Preparation Checklist</h3>
-        <p>
-          A practical checklist to prepare teams and records ahead of internal
-          or external audits.
-        </p>
-        <p style="margin-top:10px; color:#b0b6c2;">
-          Format: PDF
-        </p>
-      </div>
+    <!-- Compliance Accelerators Section -->
+    <section class="accelerators-section container">
+        <div class="section-header">
+            <h2>Compliance Accelerators</h2>
+            <p>Productized regulatory frameworks used in our consulting engagements to reduce risk and accelerate execution. Built from real audit and consulting experience.</p>
+        </div>
 
-    </div>
-  </div>
-</section>
+        <div class="accelerators-grid">
+            <!-- Accelerator 1 -->
+            <div class="accelerator-card">
+                <h3>ISO 13485 Audit-Ready QMS Accelerator</h3>
+                
+                <div class="accelerator-content">
+                    <div class="accelerator-section-label">Who It's For</div>
+                    <div class="accelerator-section-title">Early-stage to scaling medical device manufacturers preparing for certification or audits.</div>
 
-<section class="section">
-  <div class="container">
+                    <div class="accelerator-section-label">What Problem It Solves</div>
+                    <div class="accelerator-section-title">Eliminates structural QMS gaps that lead to audit nonconformities and inspection failures.</div>
 
-    <h2 style="margin-bottom:20px;">Premium Resources (Coming Soon)</h2>
+                    <div class="accelerator-section-label">What's Included</div>
+                    <div class="accelerator-includes">
+                        <ul>
+                            <li>QMS architecture & process map</li>
+                            <li>Core procedures with ISO 13485 clause alignment</li>
+                            <li>Internal audit & readiness checklist</li>
+                            <li>Inspection preparation toolkit</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <div class="card-grid">
+                <div class="accelerator-trust">
+                    Built from real audit and consulting experience across 15+ medical device organizations.
+                </div>
 
-      <div class="card">
-        <h3>QMS-in-a-Box Starter Kit</h3>
-        <p>
-          A complete starter QMS package for early-stage medical device
-          companies, including procedures, templates, and implementation guidance.
-        </p>
-      </div>
+                <a href="#" class="accelerator-cta">Explore Accelerator</a>
+            </div>
 
-      <div class="card">
-        <h3>Audit Readiness Toolkit</h3>
-        <p>
-          A comprehensive toolkit covering internal audits, management review,
-          CAPA handling, and inspection readiness.
-        </p>
-      </div>
+            <!-- Accelerator 2 -->
+            <div class="accelerator-card">
+                <h3>EU MDR PMS & Vigilance Execution Kit</h3>
+                
+                <div class="accelerator-content">
+                    <div class="accelerator-section-label">Who It's For</div>
+                    <div class="accelerator-section-title">Manufacturers navigating EU MDR compliance and post-market surveillance requirements.</div>
 
-      <div class="card">
-        <h3>AI-Enabled Medical Device QMS Toolkit</h3>
-        <p>
-          Templates and guidance for integrating AI lifecycle controls into
-          ISO 13485 systems, aligned with ISO/IEC 42001 (where applicable).
-        </p>
-      </div>
+                    <div class="accelerator-section-label">What Problem It Solves</div>
+                    <div class="accelerator-section-title">Bridges the gap between regulatory expectations and operational post-market surveillance systems.</div>
 
-    </div>
-  </div>
-</section>
+                    <div class="accelerator-section-label">What's Included</div>
+                    <div class="accelerator-includes">
+                        <ul>
+                            <li>PMS plan template & implementation roadmap</li>
+                            <li>Vigilance & incident management procedures</li>
+                            <li>Notified Body audit readiness checklist</li>
+                            <li>Post-market surveillance governance framework</li>
+                        </ul>
+                    </div>
+                </div>
 
-<footer>
-  NeubiQ MedCon Services © All rights reserved
-</footer>
+                <div class="accelerator-trust">
+                    Built from real audit and consulting experience across 15+ medical device organizations.
+                </div>
 
+                <a href="#" class="accelerator-cta">Explore Accelerator</a>
+            </div>
+
+            <!-- Accelerator 3 -->
+            <div class="accelerator-card">
+                <h3>AI SaMD Risk & GMLP Governance Framework</h3>
+                
+                <div class="accelerator-content">
+                    <div class="accelerator-section-label">Who It's For</div>
+                    <div class="accelerator-section-title">Organizations developing AI-enabled or software-driven medical devices and systems.</div>
+
+                    <div class="accelerator-section-label">What Problem It Solves</div>
+                    <div class="accelerator-section-title">Establishes governance structures and risk frameworks aligned with emerging AI/SaMD regulatory expectations.</div>
+
+                    <div class="accelerator-section-label">What's Included</div>
+                    <div class="accelerator-includes">
+                        <ul>
+                            <li>AI/ML governance framework & controls</li>
+                            <li>GMLP (Good ML Practice) alignment toolkit</li>
+                            <li>Model validation & risk assessment procedures</li>
+                            <li>Regulatory pathway decision tree</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accelerator-trust">
+                    Built from real audit and consulting experience across 15+ medical device organizations.
+                </div>
+
+                <a href="#" class="accelerator-cta">Explore Accelerator</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisory Bridge Section -->
+    <section class="advisory-section">
+        <div class="container">
+            <h2>Not Sure What Applies to Your Product?</h2>
+            <p>Regulations are context-dependent. Tools and insights help—but strategy requires expert interpretation. Let's discuss your specific regulatory landscape and compliance priorities.</p>
+            <a href="contact.html" class="advisory-cta">Book a Regulatory Readiness Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 NeubiQ MedCon Services. All rights reserved.</p>
+    </footer>
 </body>
 </html>
