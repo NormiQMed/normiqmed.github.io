@@ -15,27 +15,31 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #1a1a1a;
-            background: #fafafa;
+            background: #ffffff;
         }
 
         header {
             background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
             color: white;
-            padding: 60px 20px;
+            padding: 100px 20px 80px;
             text-align: center;
+            border-bottom: 8px solid #ff9800;
         }
 
         header h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 15px;
             font-weight: 700;
+            letter-spacing: -1px;
         }
 
         header p {
-            font-size: 1.1em;
+            font-size: 1.15em;
             opacity: 0.95;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 500;
         }
 
         .container {
@@ -45,25 +49,37 @@
         }
 
         section {
-            padding: 60px 20px;
+            padding: 100px 20px;
+            margin-top: 80px;
+            border-top: 1px solid #e0e0e0;
+            position: relative;
         }
 
+        /* Intro Section */
         .contact-intro {
-            background: white;
+            background: #fafafa;
             text-align: center;
         }
 
         .contact-intro h2 {
-            font-size: 1.8em;
+            font-size: 2.4em;
             margin-bottom: 20px;
             color: #0f3b6b;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .contact-intro p {
             font-size: 1.05em;
             color: #666;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
+            line-height: 1.9;
+        }
+
+        /* Contact Grid Section */
+        .contact-grid-section {
+            background: #ffffff;
         }
 
         .contact-grid {
@@ -75,16 +91,18 @@
         }
 
         .contact-form-wrapper {
-            background: white;
-            padding: 40px;
+            background: #fafafa;
+            padding: 45px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid #0f3b6b;
         }
 
         .contact-form-wrapper h3 {
             font-size: 1.4em;
             margin-bottom: 25px;
             color: #0f3b6b;
+            font-weight: 700;
         }
 
         .form-group {
@@ -193,10 +211,11 @@
         }
 
         .contact-info {
-            background: white;
-            padding: 40px;
+            background: #ffffff;
+            padding: 45px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid #0f3b6b;
             height: 100%;
         }
 
@@ -204,6 +223,7 @@
             font-size: 1.4em;
             margin-bottom: 30px;
             color: #0f3b6b;
+            font-weight: 700;
         }
 
         .info-block {
@@ -222,6 +242,7 @@
             font-size: 1.1em;
             color: #0f3b6b;
             margin-bottom: 10px;
+            font-weight: 700;
         }
 
         .info-block p {
@@ -250,44 +271,54 @@
             font-size: 0.9em;
             color: #ff6f00;
             margin-top: 20px;
+            font-weight: 500;
         }
 
+        /* Why Contact Section */
         .why-contact {
-            background: #f9f9f9;
-            margin-top: 80px;
+            background: #fafafa;
         }
 
         .why-contact h2 {
-            font-size: 1.8em;
+            font-size: 2.4em;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             color: #0f3b6b;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .reason-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
         }
 
         .reason-card {
-            background: white;
-            padding: 30px;
+            background: #ffffff;
+            padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid #0f3b6b;
+            transition: all 0.3s ease;
+        }
+
+        .reason-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
         }
 
         .reason-card h4 {
-            font-size: 1.2em;
+            font-size: 1.25em;
             color: #0f3b6b;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .reason-card p {
             color: #666;
             font-size: 0.95em;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .icon-placeholder {
@@ -295,13 +326,14 @@
             margin-bottom: 15px;
         }
 
+        /* Footer */
         footer {
             background: #1a1a1a;
             color: #999;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             font-size: 0.9em;
-            margin-top: 60px;
+            border-top: 1px solid #333;
         }
 
         .success-message {
@@ -312,11 +344,17 @@
             padding: 20px;
             border-radius: 4px;
             margin-bottom: 20px;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8em;
+            }
+
+            section {
+                padding: 60px 20px;
+                margin-top: 50px;
             }
 
             .contact-grid {
@@ -330,7 +368,11 @@
 
             .contact-form-wrapper,
             .contact-info {
-                padding: 25px;
+                padding: 30px;
+            }
+
+            .why-contact h2 {
+                font-size: 1.8em;
             }
 
             .reason-cards {
@@ -340,17 +382,20 @@
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Contact Us</h1>
         <p>Let's discuss your regulatory challenges and build a clear path forward</p>
     </header>
 
+    <!-- Contact Intro Section -->
     <section class="contact-intro container">
         <h2>Get in Touch</h2>
         <p>Whether you're starting your medical device journey or scaling globally, we're here to help. Reach out with your questions, and we'll respond within 24 hours.</p>
     </section>
 
-    <section class="container">
+    <!-- Contact Form & Info Section -->
+    <section class="contact-grid-section container">
         <div class="contact-grid">
             <div class="contact-form-wrapper">
                 <h3>Send us a message</h3>
@@ -359,7 +404,7 @@
                     ✓ Thank you! We've received your inquiry. We'll get back to you within 24 hours.
                 </div>
 
-                <form id="<"contactForm" action="https://formspree.io/f/xgovywza" method="POST">
+                <form id="contactForm" action="https://formspree.io/f/xgovywza" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">First Name *</label>
@@ -401,19 +446,19 @@
                         <input type="tel" id="phone" name="phone">
                     </div>
 
-                    <div class="form-group">
+                    <div class="checkbox-group">
                         <label>What services are you interested in? *</label>
                         <div class="checkbox-item">
                             <input type="checkbox" id="service1" name="services" value="QMS Architecture">
-                            <label for="service1">Regulatory & QMS Architecture</label>
+                            <label for="service1">Quality Management System Enablement</label>
                         </div>
                         <div class="checkbox-item">
                             <input type="checkbox" id="service2" name="services" value="AI/SaMD Governance">
-                            <label for="service2">AI, SaMD & Software Governance</label>
+                            <label for="service2">AI & Digital Quality System Governance</label>
                         </div>
                         <div class="checkbox-item">
                             <input type="checkbox" id="service3" name="services" value="Global Market Authorization">
-                            <label for="service3">Global Market Authorization & Scale</label>
+                            <label for="service3">EU MDR & Regulatory Compliance</label>
                         </div>
                         <div class="checkbox-item">
                             <input type="checkbox" id="service4" name="services" value="Not sure yet">
@@ -427,7 +472,7 @@
                     </div>
 
                     <div class="form-note">
-                        <strong>Note:</strong> All information is confidential and protected. We'll use your details only to respond to your inquiry.
+                        <strong>Privacy:</strong> All information is confidential and protected. We'll use your details only to respond to your inquiry.
                     </div>
 
                     <button type="submit" class="btn-submit">Send Inquiry</button>
@@ -449,15 +494,15 @@
 
                 <div class="info-block">
                     <h4>Email</h4>
-                    <p><a href="mailto:contact@neubiq.info">info@neubiq.com</a></p>
-                    <p><a href="mailto:regulatory@neubiq.info">regulatory@neubiq.com</a> (for regulatory queries)</p>
+                    <p><a href="mailto:info@neubiq.com">info@neubiq.com</a></p>
+                    <p><a href="mailto:regulatory@neubiq.com">regulatory@neubiq.com</a> (for regulatory queries)</p>
                 </div>
 
                 <div class="info-block">
                     <h4>Service Areas</h4>
-                    <p> USA (FDA)</p>
-                    <p> European Union (MDR)</p>
-                    <p> India (CDSCO)</p>
+                    <p>🇺🇸 USA (FDA)</p>
+                    <p>🇪🇺 European Union (MDR)</p>
+                    <p>🇮🇳 India (CDSCO)</p>
                 </div>
 
                 <div class="info-block">
@@ -466,45 +511,45 @@
                 </div>
 
                 <div class="response-time">
-                    <strong>Faster response?</strong> Include your phone number and mention your preferred contact time.
+                    <strong>💡 Faster response?</strong> Include your phone number and mention your preferred contact time.
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Why Contact Section -->
     <section class="why-contact container">
         <h2>Why Choose NeubiQ for Your Regulatory Needs?</h2>
         <div class="reason-cards">
             <div class="reason-card">
                 <div class="icon-placeholder">✓</div>
                 <h4>Execution-Focused</h4>
-                <p>We don't just advise—we implement. Clear ownership, traceable deliverables, audit-ready documentation.</p>
+                <p>Engagements are delivery-led and outcome-oriented. We take clear ownership of defined scopes, with documentation and systems designed to operate in practice and withstand regulatory review.</p>
             </div>
             <div class="reason-card">
                 <div class="icon-placeholder">🌍</div>
                 <h4>Global Expertise</h4>
-                <p>FDA, EU MDR, and India CDSCO experience. We understand regional requirements and help you navigate them efficiently.</p>
+                <p>Experience across EU MDR, FDA-aligned quality systems, and India CDSCO requirements. We understand how regional expectations differ—and how to align systems without unnecessary duplication or rework.</p>
             </div>
             <div class="reason-card">
                 <div class="icon-placeholder">⚡</div>
-                <h4>AI/SaMD Specialists</h4>
-                <p>Regulatory pathways for software and AI-enabled devices are our core focus. We stay ahead of evolving standards.</p>
+                <h4>AI/SaMD Expert</h4>
+                <p>Structured governance for software-driven and AI-enabled medical devices. We support teams in establishing compliant, risk-based frameworks aligned with evolving quality expectations for SaMD, AI, and data-driven systems.</p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>NeubiQ MedCon Services © All rights reserved</p>
+        <p>&copy; 2024 NeubiQ MedCon Services. All rights reserved.</p>
     </footer>
 
-   <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        // Let Formspree handle submission
-        // Just show loading state
-        const btn = document.querySelector('.btn-submit');
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
-    });
-</script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const btn = document.querySelector('.btn-submit');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+        });
+    </script>
 </body>
 </html>
