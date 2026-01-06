@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="canonical" href="https://neubiq.info/">
+      <link rel="canonical" href="https://neubiq.info/"> 
 <title>NeubiQ MedCon | Regulatory & QMS Consulting</title>
 
 <style>
@@ -79,6 +79,78 @@ nav a {
   background: #1a5fa0;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(15, 59, 107, 0.3);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #0f3b6b;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.99);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex-direction: column;
+  gap: 0;
+  padding: 20px 0;
+  z-index: 999;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 15px 40px;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  border-bottom: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  background-color: #f5f5f5;
+}
+
+.mobile-menu .btn-cta {
+  margin: 10px 40px 0 40px;
+  text-align: center;
+  width: auto;
+  border: none;
 }
 
 /* =====================
@@ -494,7 +566,11 @@ footer .container {
   }
 
   nav ul {
-    gap: 20px;
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
   }
 
   .hero {
@@ -547,6 +623,11 @@ footer .container {
     <nav>
         <div class="container">
             <a href="index.html" class="logo">NeubiQ</a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="approach.html">Approach</a></li>
@@ -554,6 +635,13 @@ footer .container {
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" class="btn-cta">Book Consultation</a></li>
             </ul>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="services.html">Services</a>
+            <a href="approach.html">Approach</a>
+            <a href="resources.html">Resources</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="btn-cta">Book Consultation</a>
         </div>
     </nav>
 
@@ -732,5 +820,24 @@ footer .container {
             </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
