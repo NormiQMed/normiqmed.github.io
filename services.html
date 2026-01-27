@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="canonical" href="https://neubiq.info/services.html">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://neubiq.info/services.html">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>Our Services | NeubiQ MedCon</title>
     <style>
         * {
@@ -57,336 +57,120 @@
             position: relative;
         }
 
-        /* Intro Section */
-        .intro-section {
-            background: #fafafa;
-            text-align: center;
+        /* Services Navigation Section */
+        .services-nav-section {
+            background: #ffffff;
+            padding: 80px 20px;
+            margin-top: 0;
+            border-top: none;
         }
 
-        .intro-section h2 {
+        .services-nav-section h2 {
+            text-align: center;
             font-size: 2.4em;
+            margin-bottom: 50px;
+            color: #0f3b6b;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .service-panel {
+            background: #ffffff;
             margin-bottom: 20px;
-            color: #0f3b6b;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .intro-section p {
-            font-size: 1.05em;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.9;
-        }
-
-        /* Services Detail Section */
-        .services-section {
-            background: #ffffff;
-        }
-
-        .services-detailed {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .service-detailed-item {
-            background: #ffffff;
-            padding: 45px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-left: 5px solid #0f3b6b;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
             transition: all 0.3s ease;
         }
 
-        .service-detailed-item:hover {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-            transform: translateY(-3px);
+        .service-panel:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
         }
 
-        .service-number {
-            display: inline-block;
+        .panel-header {
             background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
             color: white;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 55px;
-            font-weight: bold;
-            font-size: 1.4em;
-            margin-bottom: 18px;
-            box-shadow: 0 4px 12px rgba(15, 59, 107, 0.3);
-        }
-
-        .service-detailed-item h3 {
-            font-size: 1.5em;
-            color: #0f3b6b;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .service-detailed-item > p {
-            font-size: 1em;
-            color: #666;
-            margin-bottom: 18px;
-            line-height: 1.8;
-        }
-
-        .differentiation {
-            font-size: 0.95em;
-            color: #0f3b6b;
-            font-weight: 500;
-            margin-bottom: 25px;
-            padding: 18px;
-            background: #e8f0ff;
-            border-left: 4px solid #0f3b6b;
-            border-radius: 4px;
-        }
-
-        .capabilities-label {
-            font-size: 0.85em;
-            font-weight: 700;
-            color: #0f3b6b;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 25px 0 15px 0;
-        }
-
-        .capabilities-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 12px;
-        }
-
-        .capabilities-list li {
-            padding: 12px 15px;
-            background: #f5f5f5;
-            border-left: 3px solid #0f3b6b;
-            border-radius: 2px;
-            color: #555;
-            font-size: 0.95em;
-        }
-
-        /* Market Focus Section */
-        .market-focus {
-            background: #fafafa;
-            text-align: center;
-        }
-
-        .market-focus h2 {
-            font-size: 2.4em;
-            margin-bottom: 30px;
-            color: #0f3b6b;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .market-badges {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-
-        .badge {
-            background: #e8f0ff;
-            border-left: 4px solid #0f3b6b;
-            padding: 15px 25px;
-            border-radius: 4px;
-            font-weight: 500;
-            color: #0f3b6b;
-        }
-
-        .badge.highlight {
-            background: #fff3cd;
-            border-left-color: #ff9800;
-            color: #ff6f00;
-        }
-
-        .market-focus-text {
-            color: #666;
-            font-size: 1.05em;
-            margin-top: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.9;
-        }
-
-        /* Regional Expertise Section */
-        .regional-expertise {
-            background: #ffffff;
-        }
-
-        .regional-expertise h2 {
-            text-align: center;
-            font-size: 2.4em;
-            margin-bottom: 50px;
-            color: #0f3b6b;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .regional-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .regional-box {
-            background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
-            padding: 35px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-left: 5px solid #0f3b6b;
-            transition: all 0.3s ease;
-        }
-
-        .regional-box:hover {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transform: translateY(-3px);
-        }
-
-        .regional-box h4 {
-            color: #0f3b6b;
-            margin-bottom: 12px;
-            font-size: 1.15em;
-            font-weight: 700;
-        }
-
-        .regional-box p {
-            font-size: 0.95em;
-            color: #666;
-            line-height: 1.7;
-        }
-
-        /* How We Work Section */
-        .how-we-work {
-            background: #fafafa;
-        }
-
-        .how-we-work h2 {
-            font-size: 2.4em;
-            text-align: center;
-            margin-bottom: 30px;
-            color: #0f3b6b;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .how-we-work > p {
-            text-align: center;
-            color: #666;
-            margin-bottom: 50px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 1.05em;
-            line-height: 1.9;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .step {
-            position: relative;
-            text-align: center;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-
-        .step:hover {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transform: translateY(-3px);
-        }
-
-        .step-number {
-            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.5em;
-            margin: 0 auto 18px;
-            box-shadow: 0 4px 12px rgba(15, 59, 107, 0.35);
-        }
-
-        .step h4 {
-            color: #0f3b6b;
-            margin-bottom: 12px;
-            font-weight: 700;
-            font-size: 1.1em;
-        }
-
-        .step p {
-            color: #666;
-            font-size: 0.95em;
-            line-height: 1.6;
-        }
-
-        /* Which Service Section */
-        .which-service {
-            background: #ffffff;
-        }
-
-        .which-service h2 {
-            text-align: center;
-            font-size: 2.4em;
-            margin-bottom: 50px;
-            color: #0f3b6b;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .service-selector {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .selector-card {
-            background: #fafafa;
-            padding: 30px;
-            margin-bottom: 18px;
-            border-radius: 6px;
+            padding: 25px 30px;
             cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             transition: all 0.3s ease;
-            border-left: 5px solid #ff9800;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
-        .selector-card:hover {
-            background: #fff3cd;
-            border-left-color: #ff6f00;
-            box-shadow: 0 6px 16px rgba(255, 152, 0, 0.15);
-            transform: translateX(10px);
+        .panel-header:hover {
+            background: linear-gradient(135deg, #1a5fa0 0%, #0f3b6b 100%);
         }
 
-        .selector-card h4 {
-            color: #0f3b6b;
-            margin-bottom: 8px;
+        .panel-header h3 {
+            font-size: 1.4em;
             font-weight: 700;
-            font-size: 1.05em;
+            margin: 0;
         }
 
-        .selector-card p {
-            font-size: 0.95em;
-            color: #ff6f00;
+        .panel-toggle {
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .panel-header.active .panel-toggle {
+            transform: rotate(45deg);
+        }
+
+        .panel-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: #fafafa;
+        }
+
+        .panel-content.active {
+            max-height: 1000px;
+        }
+
+        .sub-services-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sub-service-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .sub-service-item:last-child {
+            border-bottom: none;
+        }
+
+        .sub-service-link {
+            display: block;
+            padding: 20px 30px;
+            color: #0f3b6b;
+            text-decoration: none;
+            font-size: 1.05em;
             font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .sub-service-link:before {
+            content: '→';
+            position: absolute;
+            left: 25px;
+            color: #ff9800;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .sub-service-link:hover {
+            background: #ffffff;
+            padding-left: 60px;
+            color: #ff9800;
+        }
+
+        .sub-service-link:hover:before {
+            left: 35px;
         }
 
         /* CTA Section */
@@ -396,6 +180,7 @@
             text-align: center;
             border-top: 8px solid #ff9800;
             border-bottom: 8px solid #ff9800;
+            margin-top: 80px;
         }
 
         .cta-section h2 {
@@ -473,34 +258,35 @@
                 margin-top: 50px;
             }
 
-            .intro-section h2,
-            .market-focus h2,
-            .regional-expertise h2,
-            .how-we-work h2,
-            .which-service h2,
+            .services-nav-section h2,
             .cta-section h2 {
                 font-size: 1.8em;
             }
 
-            .service-detailed-item {
-                padding: 30px;
+            .panel-header {
+                padding: 20px;
             }
 
-            .capabilities-list {
-                grid-template-columns: 1fr;
+            .panel-header h3 {
+                font-size: 1.1em;
             }
 
-            .market-badges {
-                flex-direction: column;
-                gap: 12px;
+            .sub-service-link {
+                padding: 15px 20px;
+                padding-left: 40px;
+                font-size: 0.95em;
             }
 
-            .badge {
-                display: block;
+            .sub-service-link:before {
+                left: 15px;
             }
 
-            .process-steps {
-                grid-template-columns: 1fr;
+            .sub-service-link:hover {
+                padding-left: 50px;
+            }
+
+            .sub-service-link:hover:before {
+                left: 25px;
             }
 
             .cta-buttons {
@@ -510,202 +296,155 @@
             .btn {
                 width: 100%;
             }
-
-            .regional-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .selector-card:hover {
-                transform: translateX(5px);
-            }
         }
     </style>
 </head>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <body>
     <!-- Header -->
     <header>
         <h1>Our Services</h1>
-        <p>We deliver structured quality and regulatory capabilities that enable medical device organizations to operate effectively within regulated environments.</p>
+        <p>Modular quality and regulatory capabilities structured to support medical device organizations across compliance, lifecycle, and governance requirements.</p>
     </header>
 
-    <!-- Intro Section -->
-    <section class="intro-section container">
-        <h2>Quality Systems as an Operating Capability</h2>
-        <p>Our engagements focus on embedding regulatory requirements into operating models that support execution discipline, inspection readiness, and long-term system stability.</p>
-    </section>
+    <!-- Services Navigation Section -->
+    <section class="services-nav-section container">
+        <h2>Services Architecture</h2>
 
-    <!-- Services Detail Section -->
-    <section class="services-section container">
-        <div class="services-detailed">
-            <!-- Service 1 -->
-            <div class="service-detailed-item">
-                <div class="service-number">1</div>
-                <h3>Quality Management System Enablement</h3>
-                <p>Support for the establishment and sustainment of ISO 13485 and MDSAP-aligned quality management systems structured to operate as part of the organization's core operating model.</p>
-                <div class="differentiation">
-                    The emphasis is on system simplification, logical process sequencing, and alignment between documented controls and operational reality.
-                </div>
-                <div class="capabilities-label">Capabilities</div>
-                <ul class="capabilities-list">
-                    <li>Quality system architecture and governance</li>
-                    <li>ISO 13485 and MDSAP alignment</li>
-                    <li>Internal audit and inspection readiness frameworks</li>
-                    <li>CAPA, risk management, and post-market system integration</li>
-                </ul>
+        <!-- Panel 1: Quality Management Systems -->
+        <div class="service-panel">
+            <div class="panel-header" onclick="togglePanel(this)">
+                <h3>Quality Management Systems</h3>
+                <span class="panel-toggle">+</span>
             </div>
-
-            <!-- Service 2 -->
-            <div class="service-detailed-item">
-                <div class="service-number">2</div>
-                <h3>Managed Quality System Services</h3>
-                <p>Ongoing operational ownership of client quality management systems over defined engagement periods.</p>
-                <div class="differentiation">
-                    This engagement model enables continuous compliance, documentation integrity, and sustained inspection readiness without dependence on ad-hoc interventions.
-                </div>
-                <div class="capabilities-label">Scope</div>
-                <ul class="capabilities-list">
-                    <li>QMS maintenance and controlled updates</li>
-                    <li>Documentation change management</li>
-                    <li>CAPA and audits support</li>
-                    <li>Continuous alignment with applicable regulations</li>
-                </ul>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="service-detailed-item">
-                <div class="service-number">3</div>
-                <h3>EU MDR Compliance Alignment</h3>
-                <p>Structured preparation, alignment, and lifecycle maintenance of EU MDR technical documentation and post-market processes, including transition from MDD to MDR.</p>
-                <div class="differentiation">
-                    Engagements focus on remediation, documentation updates, and lifecycle maintenance of existing EU MDR technical files.
-                </div>
-                <div class="capabilities-label">Capabilities</div>
-                <ul class="capabilities-list">
-                    <li>Technical documentation</li>
-                    <li>Clinical evaluation and risk documentation preparation & updates</li>
-                    <li>Post-market surveillance and vigilance system alignment</li>
-                    <li>Ongoing EU MDR compliance support</li>
-                </ul>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="service-detailed-item">
-                <div class="service-number">4</div>
-                <h3>Indian Regulatory Compliance (CDSCO)</h3>
-                <p>Quality system and documentation alignment supporting compliance with Indian regulatory requirements for medical devices.</p>
-                <div class="differentiation">
-                    Support is tailored to Indian regulatory requirements, covering documentation alignment and post-approval compliance obligations.
-                </div>
-                <div class="capabilities-label">Capabilities</div>
-                <ul class="capabilities-list">
-                    <li>Quality system alignment for Indian regulatory expectations</li>
-                    <li>Documentation support for CDSCO submissions</li>
-                    <li>Post-approval compliance and lifecycle support</li>
-                </ul>
-            </div>
-
-            <!-- Service 5 -->
-            <div class="service-detailed-item">
-                <div class="service-number">5</div>
-                <h3>AI & Digital Quality System Governance</h3>
-                <p>Establishment of ISO 42001-aligned management systems integrated with existing medical device quality frameworks.</p>
-                <div class="differentiation">
-                    Services focus on governance structures, management system alignment, and lifecycle controls rather than regulatory submission ownership.
-                </div>
-                <div class="capabilities-label">Capabilities</div>
-                <ul class="capabilities-list">
-                    <li>ISO 42001 management system implementation</li>
-                    <li>AI governance and risk framework alignment</li>
-                    <li>Integration with ISO 13485 and MDSAP systems</li>
+            <div class="panel-content">
+                <ul class="sub-services-list">
+                    <li class="sub-service-item">
+                        <a href="service-iso-13485-qms.html" class="sub-service-link">Medical Device Quality Management System (ISO 13485)</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-fda-qsr-qmsr.html" class="sub-service-link">FDA QSR / QMSR Quality System</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-ai-samd-qms.html" class="sub-service-link">AI & SaMD Quality Management System</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-qms-remediation.html" class="sub-service-link">QMS Remediation & Inspection Readiness</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-managed-qms.html" class="sub-service-link">Managed Quality System Services</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </section>
 
-    <!-- Market Focus Section -->
-    <section class="market-focus container">
-        <h2>We Serve Medical Device Manufacturers Globally</h2>
-        <div class="market-badges">
-            <div class="badge">🌍 ISO/MDSAP-aligned Quality Systems</div>
-            <div class="badge">🌍 EU MDR & CDSCO Alignment</div>
-            <div class="badge highlight">⚡ Digital & AI Governance Alignment</div>
-        </div>
-        <p class="market-focus-text">
-            Engagements support organizations operating across multiple regulated environments, with emphasis on quality system alignment for EU MDR, CDSCO, and digitally enabled medical technologies.
-        </p>
-    </section>
-
-    <!-- Regional Expertise Section -->
-    <section class="regional-expertise container">
-        <h2>Regulatory Expertise Across Key Markets</h2>
-        <div class="regional-grid">
-            <div class="regional-box">
-                <h4>Multi-Region Quality Alignment</h4>
-                <p>MDSAP-aligned quality system structures designed to support inspection readiness across participating regulatory authorities.</p>
+        <!-- Panel 2: AI & Digital Medical Devices -->
+        <div class="service-panel">
+            <div class="panel-header" onclick="togglePanel(this)">
+                <h3>AI & Digital Medical Devices</h3>
+                <span class="panel-toggle">+</span>
             </div>
-            <div class="regional-box">
-                <h4>🇪🇺 European Union (MDR)</h4>
-                <p>Technical file development, Notified Body coordination, and ongoing EU MDR compliance maintenance.</p>
-            </div>
-            <div class="regional-box">
-                <h4>🇮🇳 India (CDSCO)</h4>
-                <p>Device licensing documentation, regulatory dossier preparation, and post-approval compliance support.</p>
+            <div class="panel-content">
+                <ul class="sub-services-list">
+                    <li class="sub-service-item">
+                        <a href="service-ai-governance.html" class="sub-service-link">AI Governance within Medical Device QMS</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-samd-lifecycle.html" class="sub-service-link">SaMD Lifecycle & Quality Governance</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-iso-42001.html" class="sub-service-link">ISO 42001 Integration for Medical Devices</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-algorithm-controls.html" class="sub-service-link">Algorithm Change & Performance Controls</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
 
-    <!-- How We Work Section -->
-    <section class="how-we-work container">
-        <h2>How We Work</h2>
-        <p>Our engagement model is structured to integrate with client organizations while maintaining clear regulatory accountability and execution discipline.</p>
-        <div class="process-steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h4>Gap Assessment</h4>
-                <p>Assessment of current-state alignment against applicable regulatory requirements</p>
+        <!-- Panel 3: Regulatory & Technical Documentation -->
+        <div class="service-panel">
+            <div class="panel-header" onclick="togglePanel(this)">
+                <h3>Regulatory & Technical Documentation</h3>
+                <span class="panel-toggle">+</span>
             </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h4>Execution Planning</h4>
-                <p>Design tailored roadmap aligned to your product, organization, and market strategy</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h4>Direct Collaboration</h4>
-                <p>Deploy QMS processes and controls with your team</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h4>Audit-Ready Documentation</h4>
-                <p>Verify effectiveness and ensure systems ready for regulatory scrutiny</p>
+            <div class="panel-content">
+                <ul class="sub-services-list">
+                    <li class="sub-service-item">
+                        <a href="service-eu-mdr-documentation.html" class="sub-service-link">EU MDR Technical Documentation</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-fda-submissions.html" class="sub-service-link">FDA Submission Documentation Support</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-gspr-mapping.html" class="sub-service-link">GSPR / Essential Requirements Mapping</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-technical-file-remediation.html" class="sub-service-link">Technical File Remediation & Traceability</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
 
-    <!-- Which Service Section -->
-    <section class="which-service container">
-        <h2>Where Clients Typically Engage Us</h2>
-        <div class="service-selector">
-            <div class="selector-card">
-                <h4>Establishing or restructuring a quality system?</h4>
-                <p>→ Quality Management System Enablement</p>
+        <!-- Panel 4: Clinical & Risk Management -->
+        <div class="service-panel">
+            <div class="panel-header" onclick="togglePanel(this)">
+                <h3>Clinical & Risk Management</h3>
+                <span class="panel-toggle">+</span>
             </div>
-            <div class="selector-card">
-                <h4>Need ongoing QMS operation and maintenance?</h4>
-                <p>→ Managed Quality System Services</p>
+            <div class="panel-content">
+                <ul class="sub-services-list">
+                    <li class="sub-service-item">
+                        <a href="service-clinical-evaluation.html" class="sub-service-link">Clinical Evaluation & CER</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-clinical-risk.html" class="sub-service-link">Clinical Risk & Benefit–Risk Frameworks</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-iso-14971.html" class="sub-service-link">ISO 14971 Risk Management Integration</a>
+                    </li>
+                </ul>
             </div>
-            <div class="selector-card">
-                <h4>Expanding to EU or need MDR compliance?</h4>
-                <p>→ EU MDR Compliance Alignment</p>
+        </div>
+
+        <!-- Panel 5: Post-Market & Lifecycle Compliance -->
+        <div class="service-panel">
+            <div class="panel-header" onclick="togglePanel(this)">
+                <h3>Post-Market & Lifecycle Compliance</h3>
+                <span class="panel-toggle">+</span>
             </div>
-            <div class="selector-card">
-                <h4>Targeting India market or CDSCO approval?</h4>
-                <p>→ Indian Regulatory Compliance (CDSCO)</p>
+            <div class="panel-content">
+                <ul class="sub-services-list">
+                    <li class="sub-service-item">
+                        <a href="service-pms-systems.html" class="sub-service-link">Post-Market Surveillance Systems</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-pmcf.html" class="sub-service-link">PMCF Planning & Reporting</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-vigilance.html" class="sub-service-link">Vigilance & Trend Analysis Integration</a>
+                    </li>
+                </ul>
             </div>
-            <div class="selector-card">
-                <h4>Building AI-enabled or software medical devices?</h4>
-                <p>→ AI & Digital Quality System Governance</p>
+        </div>
+
+        <!-- Panel 6: Compliance Assurance -->
+        <div class="service-panel">
+            <div class="panel-header" onclick="togglePanel(this)">
+                <h3>Compliance Assurance</h3>
+                <span class="panel-toggle">+</span>
+            </div>
+            <div class="panel-content">
+                <ul class="sub-services-list">
+                    <li class="sub-service-item">
+                        <a href="service-gap-assessments.html" class="sub-service-link">Regulatory Gap Assessments</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-internal-audit.html" class="sub-service-link">Internal Audit Framework Design</a>
+                    </li>
+                    <li class="sub-service-item">
+                        <a href="service-management-review.html" class="sub-service-link">Management Review & Governance Structure</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -713,11 +452,10 @@
     <!-- Final CTA -->
     <section class="cta-section">
         <div class="container">
-            <h2>Not all quality challenges are the same.</h2>
-            <p>Engage with a structured partner to determine the right quality system and regulatory approach for your organization.</p>
+            <h2>Determine the Right Compliance Approach</h2>
+            <p>Engage with structured regulatory and quality capabilities tailored to your organization's operational requirements.</p>
             <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
-                <a href="approach.html" class="btn btn-secondary">Learn Our Approach</a>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
             </div>
         </div>
     </section>
@@ -726,5 +464,30 @@
     <footer>
         <p>NeubiQ MedCon Services © All rights reserved</p>
     </footer>
+
+    <script>
+        function togglePanel(header) {
+            const panel = header.parentElement;
+            const content = header.nextElementSibling;
+            const allPanels = document.querySelectorAll('.panel-header');
+            const allContents = document.querySelectorAll('.panel-content');
+
+            // Close all other panels
+            allPanels.forEach(p => {
+                if (p !== header) {
+                    p.classList.remove('active');
+                }
+            });
+            allContents.forEach(c => {
+                if (c !== content) {
+                    c.classList.remove('active');
+                }
+            });
+
+            // Toggle current panel
+            header.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
