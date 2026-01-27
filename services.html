@@ -17,7 +17,22 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #1a1a1a;
-            background: #ffffff;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        body:before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(135deg, rgba(15, 59, 107, 0.02) 0%, transparent 50%),
+                repeating-linear-gradient(45deg, transparent, transparent 60px, rgba(15, 59, 107, 0.015) 60px, rgba(15, 59, 107, 0.015) 120px);
+            pointer-events: none;
+            z-index: -1;
         }
 
         header {
@@ -63,6 +78,17 @@
             padding: 80px 20px;
             margin-top: 0;
             border-top: none;
+            position: relative;
+        }
+
+        .services-nav-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(15, 59, 107, 0.1), transparent);
         }
 
         .services-nav-section h2 {
@@ -78,13 +104,20 @@
             background: #ffffff;
             margin-bottom: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            box-shadow: 
+                0 1px 3px rgba(0,0,0,0.06),
+                0 2px 6px rgba(0,0,0,0.04),
+                0 0 0 1px rgba(15, 59, 107, 0.04);
             overflow: hidden;
             transition: all 0.3s ease;
         }
 
         .service-panel:hover {
-            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            box-shadow: 
+                0 4px 12px rgba(0,0,0,0.08),
+                0 8px 24px rgba(15, 59, 107, 0.12),
+                0 0 0 1px rgba(15, 59, 107, 0.08);
+            transform: translateY(-2px);
         }
 
         .panel-header {
@@ -96,6 +129,23 @@
             justify-content: space-between;
             align-items: center;
             transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .panel-header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .panel-header:hover:before {
+            opacity: 1;
         }
 
         .panel-header:hover {
@@ -122,7 +172,18 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease;
-            background: #fafafa;
+            background: linear-gradient(to bottom, #fafbfc 0%, #f8f9fa 100%);
+            position: relative;
+        }
+
+        .panel-content:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(15, 59, 107, 0.1), transparent);
         }
 
         .panel-content.active {
@@ -135,11 +196,16 @@
         }
 
         .sub-service-item {
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid rgba(15, 59, 107, 0.08);
+            transition: all 0.2s ease;
         }
 
         .sub-service-item:last-child {
             border-bottom: none;
+        }
+
+        .sub-service-item:hover {
+            background: rgba(255, 255, 255, 0.6);
         }
 
         .sub-service-link {
@@ -322,7 +388,7 @@
                         <a href="service-iso-13485-qms.html" class="sub-service-link">Medical Device Quality Management System (ISO 13485)</a>
                     </li>
                     <li class="sub-service-item">
-                        <a href="service-fda-qsr-qmsr.html" class="sub-service-link">FDA QMSR / MDSAP Quality System</a>
+                        <a href="service-fda-qsr-qmsr.html" class="sub-service-link">FDA QSR / QMSR Quality System</a>
                     </li>
                     <li class="sub-service-item">
                         <a href="service-ai-samd-qms.html" class="sub-service-link">AI & SaMD Quality Management System</a>
