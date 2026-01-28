@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://neubiq.info/service-ai-samd-qms.html">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>AI & SaMD Quality Management System | NeubiQ MedCon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        body:before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(135deg, rgba(15, 59, 107, 0.02) 0%, transparent 50%),
+                repeating-linear-gradient(45deg, transparent, transparent 60px, rgba(15, 59, 107, 0.015) 60px, rgba(15, 59, 107, 0.015) 120px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+            border-bottom: 8px solid #ff9800;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .breadcrumb {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .breadcrumb a:hover {
+            border-bottom-color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 20px;
+            background: #ffffff;
+            box-shadow: 
+                0 1px 3px rgba(0,0,0,0.04),
+                0 0 0 1px rgba(15, 59, 107, 0.04);
+            position: relative;
+        }
+
+        section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(15, 59, 107, 0.1), transparent);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #0f3b6b;
+            margin-bottom: 25px;
+            font-weight: 700;
+            border-bottom: 3px solid #ff9800;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: #0f3b6b;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-bottom: 25px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        ul li:before {
+            content: '▪';
+            position: absolute;
+            left: 10px;
+            color: #ff9800;
+            font-weight: bold;
+        }
+
+        .section-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(15, 59, 107, 0.15), transparent);
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .section-divider:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;
+            background: #ff9800;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.1);
+        }
+
+        .standards-list {
+            background: linear-gradient(to bottom, #fafbfc 0%, #f8f9fa 100%);
+            padding: 25px;
+            border-left: 4px solid #0f3b6b;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            box-shadow: 
+                0 1px 3px rgba(0,0,0,0.04),
+                inset 0 0 0 1px rgba(15, 59, 107, 0.04);
+        }
+
+        .standards-list li {
+            padding: 8px 0 8px 25px;
+        }
+
+        .qms-integration-box {
+            background: linear-gradient(135deg, #e8f0ff 0%, #f0f6ff 100%);
+            padding: 30px;
+            border-left: 5px solid #0f3b6b;
+            border-radius: 4px;
+            margin: 30px 0;
+            box-shadow: 
+                0 1px 3px rgba(0,0,0,0.04),
+                inset 0 0 0 1px rgba(15, 59, 107, 0.06);
+            position: relative;
+        }
+
+        .qms-integration-box:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle at top right, rgba(15, 59, 107, 0.03), transparent);
+            pointer-events: none;
+        }
+
+        .qms-integration-box p {
+            margin-bottom: 15px;
+            color: #0f3b6b;
+            font-weight: 500;
+        }
+
+        .qms-integration-box ul {
+            margin-bottom: 0;
+        }
+
+        .qms-integration-box ul li {
+            color: #0f3b6b;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 8px solid #ff9800;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border-bottom: none;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: white;
+            opacity: 0.95;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1em;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            background: white;
+            color: #0f3b6b;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9em;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .qms-integration-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="breadcrumb">
+            <a href="services.html">Services</a> > Quality Management Systems
+        </div>
+        <h1>AI & SaMD Quality Management System</h1>
+    </header>
+
+    <!-- Main Content -->
+    <section class="container">
+        <!-- What This Service Covers -->
+        <h2>What This Service Covers</h2>
+        <ul>
+            <li>Quality management system design for AI-enabled and SaMD products</li>
+            <li>Integration of AI lifecycle controls within ISO 13485-based QMS</li>
+            <li>Governance of algorithm development, training, validation, and change</li>
+            <li>Risk management for AI and software across the product lifecycle</li>
+            <li>Post-market performance monitoring and feedback into the QMS</li>
+            <li>Alignment of AI governance with regulatory and quality expectations</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <!-- When This Service Is Typically Required -->
+        <h2>When This Service Is Typically Required</h2>
+        <ul>
+            <li>Developing or commercializing AI-enabled medical devices or SaMD</li>
+            <li>Scaling software or AI products into regulated markets</li>
+            <li>Addressing regulatory expectations for algorithm changes and updates</li>
+            <li>Integrating AI governance into an existing medical device QMS</li>
+            <li>Preparing for regulatory review or inspection of AI-based products</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <!-- Applicable Regulations & Standards -->
+        <h2>Applicable Regulations & Standards</h2>
+        <div class="standards-list">
+            <ul>
+                <li>ISO 13485</li>
+                <li>ISO 14971</li>
+                <li>IEC 62304</li>
+                <li>IEC 62366-1</li>
+                <li>ISO/IEC 42001</li>
+                <li>Applicable FDA and EU regulatory guidance for SaMD and AI</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- How This Fits Within the Quality System -->
+        <h2>How This Fits Within the Quality System</h2>
+        
+        <div class="qms-integration-box">
+            <p>This service embeds AI and SaMD controls directly into the quality management system, ensuring software and algorithm lifecycle activities are governed through existing QMS processes.</p>
+            <p>AI risks, changes, and post-market performance are managed as quality system elements rather than standalone technical or regulatory activities.</p>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Engage with us to define an AI or SaMD quality system aligned to your product, technology, and regulatory strategy.</p>
+            <a href="/contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>NeubiQ MedCon Services © All rights reserved</p>
+    </footer>
+</body>
+</html>
