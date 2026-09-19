@@ -1,232 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="canonical" href="https://normiqmed.com/about.html">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
-    <title>About NormiQ | Quality & Regulatory Enablement</title>
-    <style>
-        /* Same CSS structure as provided – unchanged */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-
-        header {
-            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
-            color: white;
-            padding: 100px 20px 80px;
-            text-align: center;
-            border-bottom: 8px solid #ff9800;
-        }
-
-        header h1 {
-            font-size: 2.8em;
-            margin-bottom: 15px;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
-
-        header p {
-            font-size: 1.15em;
-            max-width: 850px;
-            margin: 0 auto;
-            line-height: 1.8;
-            opacity: 0.95;
-            font-weight: 500;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        section {
-            padding: 100px 20px;
-            margin-top: 80px;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 2.4em;
-            color: #0f3b6b;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .section-header p {
-            font-size: 1.05em;
-            color: #666;
-            max-width: 750px;
-            margin: 0 auto;
-            line-height: 1.9;
-        }
-
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .principle-card {
-            background: #fafafa;
-            padding: 45px;
-            border-radius: 8px;
-            border-left: 5px solid #0f3b6b;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-        }
-
-        .principle-card h3 {
-            font-size: 1.3em;
-            color: #0f3b6b;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .principle-card p {
-            font-size: 0.95em;
-            color: #555;
-            line-height: 1.7;
-        }
-
-        .advisory-section {
-            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
-            color: white;
-            text-align: center;
-            border-top: 8px solid #ff9800;
-            border-bottom: 8px solid #ff9800;
-        }
-
-        .advisory-section h2 {
-            color: white;
-            font-size: 2.2em;
-            margin-bottom: 20px;
-        }
-
-        .advisory-section p {
-            font-size: 1.1em;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.8;
-            opacity: 0.95;
-        }
-
-        .advisory-cta {
-            display: inline-block;
-            background: white;
-            color: #0f3b6b;
-            padding: 15px 35px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1em;
-        }
-
-        footer {
-            background: #1a1a1a;
-            color: #999;
-            padding: 60px 20px 30px;
-            text-align: center;
-            font-size: 0.9em;
-            border-top: 1px solid #333;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://normiqmed.com/about.html">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<title>About | NormiQ Medtech Consulting</title>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>About NormiQ </h1>
-    <p>
-        NormiQ is a quality and regulatory enablement firm focused on
-        building operationally effective quality systems for regulated
-        medical device organizations.
-    </p>
-</header>
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" width="30" height="30" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17" cy="17" r="13.5" stroke="#7AA9D6" stroke-width="1.6"/>
+        <line x1="17" y1="1.5" x2="17" y2="8" stroke="#7AA9D6" stroke-width="1.6"/>
+        <circle cx="17" cy="17" r="2.6" fill="#7AA9D6"/>
+      </svg>
+      <span class="logo-divider"></span>
+      <span class="logo-text">Normi<span class="q-accent">Q</span></span>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="templates.html">Templates</a></li>
+      <li><a href="approach.html">Approach</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
+    </ul>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="services.html">Services</a>
+    <a href="templates.html">Templates</a>
+    <a href="approach.html">Approach</a>
+    <a href="resources.html">Resources</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Book Consultation</a>
+  </div>
+</nav>
 
-<section class="container">
-    <div class="section-header">
-        <h2>Our Perspective</h2>
-        <p>
-            Quality systems are not documentation artifacts. They are management systems.
-            Their effectiveness is measured by control, consistency, and sustainability —
-            not by certification alone.
-        </p>
-    </div>
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <div class="hero-kicker mono">ABOUT THE PRACTICE</div>
+    <h1>Quality systems as a management discipline, not a paper trail.</h1>
+    <p class="section-intro">A quality system's worth is measured by control and consistency — not by whether a certificate was issued. NormiQ works with medical device manufacturers to build systems that hold up under operational pressure, not just under audit.</p>
+  </div>
 </section>
 
-<section class="container">
+<section>
+  <div class="container">
     <div class="section-header">
-        <h2>What We Do</h2>
-        <p>
-            We work with medical device organizations to establish and sustain
-            quality and regulatory systems that integrate seamlessly into
-            operational models and scale with organizational growth.
-        </p>
+      <h2>How the practice operates</h2>
+      <p>Four principles shape every engagement.</p>
     </div>
-
-    <div class="principles-grid">
-        <div class="principle-card">
-            <h3>Operational Integration</h3>
-            <p>
-                Quality systems are designed as part of the organization’s operating
-                model, enabling consistent execution across functions and lifecycle stages.
-            </p>
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <div class="mono" style="color:var(--accent-bright); font-size:.85rem;">01</div>
+        <div>
+          <h3>Operational integration</h3>
+          <p>Systems are designed into how the organization actually runs — not maintained as a separate compliance layer.</p>
         </div>
-
-        <div class="principle-card">
-            <h3>Governance-Led Structure</h3>
-            <p>
-                Control is achieved through governance frameworks, role clarity,
-                and accountability — not document volume.
-            </p>
+      </div>
+      <div class="expertise-card">
+        <div class="mono" style="color:var(--accent-bright); font-size:.85rem;">02</div>
+        <div>
+          <h3>Governance over document volume</h3>
+          <p>Control comes from clear roles and accountability structures, not from the number of SOPs on file.</p>
         </div>
-
-        <div class="principle-card">
-            <h3>Inspection Readiness</h3>
-            <p>
-                System architecture and documentation are aligned with audit and
-                inspection expectations across applicable regulatory environments.
-            </p>
+      </div>
+      <div class="expertise-card">
+        <div class="mono" style="color:var(--accent-bright); font-size:.85rem;">03</div>
+        <div>
+          <h3>Inspection readiness</h3>
+          <p>Documentation is structured the way an auditor actually reviews it, across applicable regulatory environments.</p>
         </div>
-
-        <div class="principle-card">
-            <h3>Scalability by Design</h3>
-            <p>
-                Quality systems are structured to remain effective as organizations
-                evolve, digitize, and expand into new markets.
-            </p>
+      </div>
+      <div class="expertise-card">
+        <div class="mono" style="color:var(--accent-bright); font-size:.85rem;">04</div>
+        <div>
+          <h3>Built to scale</h3>
+          <p>Systems remain effective as the organization grows, digitizes, and enters new markets — without a rebuild.</p>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<section class="advisory-section">
-    <div class="container">
-        <h2>Our Role</h2>
-        <p>
-            NormiQ operates as a long-term quality and regulatory partner,
-            supporting organizations beyond certification events and into
-            sustained operational maturity.
-        </p>
-        <a href="contact.html" class="advisory-cta">Engage With Our Team</a>
+<section class="final-cta">
+  <div class="container">
+    <h2>A long-term partner, not a certification event.</h2>
+    <p>Engagements extend past the audit — toward sustained operational maturity.</p>
+    <div class="final-cta-buttons">
+      <a href="contact.html" class="btn btn-primary">Start a conversation</a>
     </div>
+  </div>
 </section>
 
 <footer>
-    <p>&copy; 2024 NormiQ MedTech Consulting. All rights reserved.</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <a href="index.html" class="logo">
+          <svg class="logo-mark" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="17" cy="17" r="13.5" stroke="#7AA9D6" stroke-width="1.6"/>
+            <line x1="17" y1="1.5" x2="17" y2="8" stroke="#7AA9D6" stroke-width="1.6"/>
+            <circle cx="17" cy="17" r="2.6" fill="#7AA9D6"/>
+          </svg>
+          <span class="logo-divider"></span>
+          <span class="logo-text">Normi<span class="q-accent">Q</span></span>
+        </a>
+        <p style="margin-top:18px; max-width:32ch;">Independent regulatory and quality systems practice for medical device manufacturers.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <a href="services.html">QMS Architecture</a>
+        <a href="services.html">Digital &amp; AI Alignment</a>
+        <a href="services.html">Market Authorization</a>
+      </div>
+      <div class="footer-section">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="approach.html">Approach</a>
+        <a href="resources.html">Resources</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>regulatory@normiqmed.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 NormiQ MedTech Consulting. All rights reserved.</div>
+  </div>
 </footer>
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>

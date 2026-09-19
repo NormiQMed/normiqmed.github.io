@@ -1,696 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://normiqmed.com/approach.html"> 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <title>Our Approach | NormiQ </title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-
-        header {
-            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
-            color: white;
-            padding: 100px 20px 80px;
-            text-align: center;
-            border-bottom: 8px solid #ff9800;
-        }
-
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 15px;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
-
-        header p {
-            font-size: 1.25em;
-            opacity: 0.95;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-            font-weight: 500;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        section {
-            padding: 100px 20px;
-            margin-top: 80px;
-            border-top: 1px solid #e0e0e0;
-            position: relative;
-        }
-
-        section::before {
-            content: '';
-            position: absolute;
-            top: -80px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 60px;
-            background: linear-gradient(to bottom, #0f3b6b, transparent);
-            opacity: 0;
-        }
-
-        /* Philosophy Section */
-        .philosophy-section {
-            background: #fafafa;
-            text-align: center;
-        }
-
-        .philosophy-section h2 {
-            font-size: 2.4em;
-            margin-bottom: 30px;
-            color: #0f3b6b;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .philosophy-intro {
-            font-size: 1.05em;
-            color: #555;
-            max-width: 900px;
-            margin: 0 auto 45px;
-            line-height: 1.9;
-        }
-
-        .philosophy-statement {
-            background: linear-gradient(135deg, #e8f0ff 0%, #f0f5ff 100%);
-            border-left: 6px solid #0f3b6b;
-            padding: 35px;
-            border-radius: 6px;
-            font-size: 1.1em;
-            color: #0f3b6b;
-            font-weight: 500;
-            margin-bottom: 35px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.85;
-            text-align: left;
-        }
-
-        .core-principle {
-            background: #ffffff;
-            padding: 35px;
-            border-radius: 6px;
-            border: 2px solid #0f3b6b;
-            margin-top: 20px;
-            font-size: 1em;
-            color: #333;
-            line-height: 1.8;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
-        }
-
-        .core-principle strong {
-            color: #0f3b6b;
-            font-weight: 600;
-        }
-
-        /* Model Section */
-        .model-section {
-            background: #ffffff;
-        }
-
-        .model-section h2 {
-            font-size: 2.6em;
-            text-align: center;
-            margin-bottom: 25px;
-            color: #0f3b6b;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .model-intro {
-            text-align: center;
-            font-size: 1.05em;
-            color: #666;
-            margin-bottom: 70px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.85;
-        }
-
-        .stages-timeline {
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 50px;
-            margin-top: 60px;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .stages-timeline::before {
-            content: '';
-            position: absolute;
-            left: 30px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: linear-gradient(180deg, #0f3b6b 0%, #0f3b6b 50%, transparent 100%);
-            z-index: 0;
-        }
-
-        .stage-item {
-            position: relative;
-            padding-left: 120px;
-            z-index: 1;
-        }
-
-        .stage-number {
-            position: absolute;
-            left: -9px;
-            top: 0;
-            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
-            color: white;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 70px;
-            font-weight: 700;
-            font-size: 1.6em;
-            box-shadow: 0 4px 15px rgba(15, 59, 107, 0.4);
-            border: 5px solid #ffffff;
-        }
-
-        .stage-item h3 {
-            font-size: 1.35em;
-            color: #0f3b6b;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .stage-item > p {
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 0.98em;
-            line-height: 1.75;
-        }
-
-        .stage-focus {
-            background: transparent;
-            border-left: 4px solid #0f3b6b;
-            padding: 0 0 0 20px;
-            border-radius: 0;
-            margin-top: 0;
-            font-size: 0.9em;
-            color: #0f3b6b;
-            font-weight: 500;
-        }
-
-        .focus-list {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 12px;
-        }
-
-        .focus-list li {
-            padding: 6px 0;
-            padding-left: 20px;
-            position: relative;
-            font-size: 0.9em;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .focus-list li:before {
-            content: "–";
-            position: absolute;
-            left: 0;
-            color: #0f3b6b;
-            font-weight: bold;
-        }
-
-        /* Why This Works Section */
-        .why-works {
-            background: #fafafa;
-            margin-top: 120px;
-        }
-
-        .why-works h2 {
-            font-size: 2.4em;
-            margin-bottom: 30px;
-            color: #0f3b6b;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .why-works-intro {
-            font-size: 1.05em;
-            color: #666;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.9;
-        }
-
-        /* Outcomes Section */
-        .outcomes-section {
-            background: #ffffff;
-        }
-
-        .outcomes-section h2 {
-            font-size: 2.4em;
-            text-align: center;
-            margin-bottom: 60px;
-            color: #0f3b6b;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .outcomes-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 45px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .outcome-card {
-            background: #fafafa;
-            padding: 45px;
-            border-radius: 8px;
-            border-left: 5px solid #0f3b6b;
-            text-align: left;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .outcome-card:hover {
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            transform: translateY(-4px);
-        }
-
-        .outcome-card .icon {
-            font-size: 3em;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .outcome-card h4 {
-            font-size: 1.3em;
-            color: #0f3b6b;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .outcome-card p {
-            color: #666;
-            font-size: 0.98em;
-            line-height: 1.8;
-        }
-
-        /* What We Avoid Section */
-        .avoid-section {
-            background: #fafafa;
-        }
-
-        .avoid-section h2 {
-            font-size: 2.4em;
-            text-align: center;
-            margin-bottom: 60px;
-            color: #0f3b6b;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .avoid-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 45px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .avoid-item {
-            background: #ffffff;
-            border-left: 5px solid #ff9800;
-            padding: 40px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .avoid-item:hover {
-            box-shadow: 0 8px 25px rgba(255, 152, 0, 0.15);
-            transform: translateY(-4px);
-        }
-
-        .avoid-item h4 {
-            color: #ff6f00;
-            margin-bottom: 15px;
-            font-weight: 700;
-            font-size: 1.2em;
-        }
-
-        .avoid-item p {
-            color: #666;
-            font-size: 0.98em;
-            line-height: 1.8;
-        }
-
-        /* CTA Section */
-        .cta-final {
-            background: linear-gradient(135deg, #0f3b6b 0%, #1a5fa0 100%);
-            color: white;
-            text-align: center;
-            border-top: 8px solid #ff9800;
-        }
-
-        .cta-final h2 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .cta-final p {
-            font-size: 1.1em;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-            opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 35px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 1em;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #0f3b6b;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #0f3b6b;
-        }
-
-        footer {
-            background: #1a1a1a;
-            color: #999;
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.9em;
-            border-top: 1px solid #333;
-        }
-
-        @media (max-width: 1200px) {
-            .stages-timeline {
-                grid-template-columns: 1fr;
-            }
-
-            .stage-item {
-                padding-left: 120px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            section {
-                padding: 60px 20px;
-                margin-top: 50px;
-            }
-
-            .model-section h2,
-            .why-works h2,
-            .outcomes-section h2,
-            .avoid-section h2 {
-                font-size: 1.8em;
-            }
-
-            .stages-timeline {
-                grid-template-columns: 1fr;
-            }
-
-            .stages-timeline::before {
-                left: 20px;
-            }
-
-            .stage-number {
-                width: 60px;
-                height: 60px;
-                line-height: 60px;
-                font-size: 1.3em;
-            }
-
-            .stage-item {
-                padding-left: 100px;
-            }
-
-            .outcomes-grid,
-            .avoid-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://normiqmed.com/approach.html">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<title>Approach | NormiQ Medtech Consulting</title>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Our Approach</h1>
-        <p>A Structured, Risk-Led Model for Sustainable Regulatory Compliance</p>
-    </header>
 
-    <!-- Philosophy Section -->
-    <section class="philosophy-section container">
-        <h2>The Challenge in Medical Device Compliance</h2>
-        <p class="philosophy-intro">
-            Medical device compliance failures rarely originate from missing documents. They originate from misaligned operating models, unmanaged risk pathways, and poorly designed control systems. Traditional compliance methodologies treat regulatory requirements as a documentation exercise, disconnected from operational reality.
-        </p>
-        <div class="philosophy-statement">
-            At NormiQ, we approach regulatory compliance as a system design and execution challenge—not as a documentation exercise or audit-driven activity.
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" width="30" height="30" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17" cy="17" r="13.5" stroke="#7AA9D6" stroke-width="1.6"/>
+        <line x1="17" y1="1.5" x2="17" y2="8" stroke="#7AA9D6" stroke-width="1.6"/>
+        <circle cx="17" cy="17" r="2.6" fill="#7AA9D6"/>
+      </svg>
+      <span class="logo-divider"></span>
+      <span class="logo-text">Normi<span class="q-accent">Q</span></span>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="templates.html">Templates</a></li>
+      <li><a href="approach.html">Approach</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
+    </ul>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="services.html">Services</a>
+    <a href="templates.html">Templates</a>
+    <a href="approach.html">Approach</a>
+    <a href="resources.html">Resources</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Book Consultation</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <div class="hero-kicker mono">METHODOLOGY</div>
+    <h1>Compliance is a system-design problem, not a documentation exercise.</h1>
+    <p class="section-intro">Most compliance failures don't come from missing paperwork — they come from operating models that were never designed to produce compliant evidence in the first place. Every engagement treats that as the actual problem to solve.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>The five-stage model</h2>
+      <p>Sustainable compliance is a design outcome, not a checklist outcome.</p>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <div class="mono" style="color:var(--accent-bright); font-size:.85rem;">01</div>
+        <div>
+          <h3>Regulatory context &amp; operating intent</h3>
+          <p>Establishing a regulatory baseline against product classification, target markets, and organizational maturity.</p>
         </div>
-        <div class="core-principle">
-            <strong>Core Principle:</strong> Compliance emerges as a natural outcome of disciplined architecture, structured risk governance, and evidence-based execution integrated into organizational operations—not as a parallel compliance function.
+      </div>
+      <div class="expertise-card">
+        <div class="mono" style="color:var(--accent-bright); font-size:.85rem;">02</div>
+        <div>
+          <h3>Risk &amp; failure-mode analysis</h3>
+          <p>Identifying where compliance risk originates, how failures propagate, and where regulatory scrutiny will concentrate.</p>
         </div>
-    </section>
-
-    <!-- Model Section -->
-    <section class="model-section container">
-        <h2>Our Five-Stage Risk-First Model</h2>
-        <p class="model-intro">
-            Sustainable compliance emerges from well-designed systems, not from checklist remediation. We apply a structured methodology that integrates regulatory intent, business context, and risk management into a coherent operating framework.
-        </p>
-
-        <div class="stages-timeline">
-            <!-- Stage 1 -->
-            <div class="stage-item">
-                <div class="stage-number">1</div>
-                <h3>Regulatory Context & Operating Intent</h3>
-                <p>We establish a clear regulatory baseline tailored to your organizational context.</p>
-                <div class="stage-focus">
-                    <strong>Assessment Focus:</strong>
-                    <ul class="focus-list">
-                        <li>Product classification and risk profile</li>
-                        <li>Target markets and applicable regulatory regimes</li>
-                        <li>Development maturity and organizational capability</li>
-                        <li>Strategic timelines and market objectives</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Stage 2 -->
-            <div class="stage-item">
-                <div class="stage-number">2</div>
-                <h3>Risk & Failure Mode Analysis</h3>
-                <p>We identify systemic vulnerabilities before they create regulatory exposure.</p>
-                <div class="stage-focus">
-                    <strong>Analysis Focus:</strong>
-                    <ul class="focus-list">
-                        <li>Where compliance risk originates</li>
-                        <li>How failures propagate across processes</li>
-                        <li>Which controls are critical versus cosmetic</li>
-                        <li>Where regulatory scrutiny will concentrate</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Stage 3 -->
-            <div class="stage-item">
-                <div class="stage-number">3</div>
-                <h3>Compliance Architecture & Control Design</h3>
-                <p>We design systems that produce compliance through normal operations.</p>
-                <div class="stage-focus">
-                    <strong>Design Focus:</strong>
-                    <ul class="focus-list">
-                        <li>Quality management system structure</li>
-                        <li>Process interfaces and ownership models</li>
-                        <li>Control mechanisms and escalation pathways</li>
-                        <li>Evidence generation and traceability logic</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Stage 4 -->
-            <div class="stage-item">
-                <div class="stage-number">4</div>
-                <h3>Targeted Remediation & Evidence Development</h3>
-                <p>We prioritize high-impact compliance risks with proportional remediation.</p>
-                <div class="stage-focus">
-                    <strong>Documentation is:</strong>
-                    <ul class="focus-list">
-                        <li>Necessary and sufficient</li>
-                        <li>Verifiable and audit-defensible</li>
-                        <li>Operationally usable</li>
-                        <li>Free of non-value-adding artifacts</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Stage 5 -->
-            <div class="stage-item">
-                <div class="stage-number">5</div>
-                <h3>Validation, Readiness & Organizational Transfer</h3>
-                <p>We ensure independent, predictable system performance and sustainability.</p>
-                <div class="stage-focus">
-                    <strong>Validation Focus:</strong>
-                    <ul class="focus-list">
-                        <li>Internal audit simulation and stress testing</li>
-                        <li>Inspection readiness assessment</li>
-                        <li>Role-based ownership clarification</li>
-                        <li>Knowledge transfer to internal teams</li>
-                    </ul>
-                </div>
-            </div>
+      </div>
+      <div class="expertise-card">
+        <div class="mono" style="color:var(--accent-bright); font-size:.85rem;">03</div>
+        <div>
+          <h3>Compliance architecture &amp; control design</h3>
+          <p>Designing quality system structure, process ownership, and traceability logic so compliance is a byproduct of normal operations.</p>
         </div>
-    </section>
-
-    <!-- Why This Works Section -->
-    <section class="why-works container">
-        <h2>Why This Approach Delivers Superior Outcomes</h2>
-        <p class="why-works-intro">
-            Our model emphasizes risk governance and system integrity over compliance documentation. Organizations that adopt this approach experience reduced regulatory exposure, fewer audit-driven surprises, clear accountability structures, and compliance frameworks that scale with organizational growth. This methodology aligns regulatory obligations with business execution, treating compliance as an operating discipline rather than a parallel activity.
-        </p>
-    </section>
-
-    <!-- Outcomes Section -->
-    <section class="outcomes-section container">
-        <h2>Expected Outcomes</h2>
-        <div class="outcomes-grid">
-            <div class="outcome-card">
-                <div class="icon">🛡️</div>
-                <h4>Reduced Regulatory Exposure</h4>
-                <p>Proactive risk identification and management eliminate regulatory surprises and accelerate market approvals.</p>
-            </div>
-            <div class="outcome-card">
-                <div class="icon">✓</div>
-                <h4>Eliminated Audit Surprises</h4>
-                <p>Inspection readiness is architected into system design, not retrofitted at audit time.</p>
-            </div>
-            <div class="outcome-card">
-                <div class="icon">📋</div>
-                <h4>Clear Accountability</h4>
-                <p>Defined ownership structures and decision pathways eliminate ambiguity and execution delays.</p>
-            </div>
-            <div class="outcome-card">
-                <div class="icon">📈</div>
-                <h4>Scalable Compliance Systems</h4>
-                <p>Framework designs accommodate organizational growth without requiring complete system rebuilds.</p>
-            </div>
+      </div>
+      <div class="expertise-card">
+        <div class="mono" style="color:var(--accent-bright); font-size:.85rem;">04</div>
+        <div>
+          <h3>Targeted remediation</h3>
+          <p>Prioritizing high-impact gaps with documentation that's necessary, sufficient, and audit-defensible — not padded.</p>
         </div>
-    </section>
-
-    <!-- What We Avoid Section -->
-    <section class="avoid-section container">
-        <h2>What We Explicitly Avoid</h2>
-        <div class="avoid-grid">
-            <div class="avoid-item">
-                <h4>Checklist-Driven Remediation</h4>
-                <p>Compliance is not a series of checkboxes. Risk-based prioritization drives all engagement activities and resource allocation.</p>
-            </div>
-            <div class="avoid-item">
-                <h4>Document-Heavy Systems</h4>
-                <p>Over-documentation creates organizational burden without regulatory value. We focus on necessary, sufficient, and verifiable evidence.</p>
-            </div>
-            <div class="avoid-item">
-                <h4>Audit-Only Compliance Design</h4>
-                <p>Systems must function operationally first. Audit readiness is a natural outcome of good system design, not the primary objective.</p>
-            </div>
-            <div class="avoid-item">
-                <h4>Generic Frameworks</h4>
-                <p>One-size-fits-all approaches fail. We tailor every engagement to your product classification, market strategy, and organizational context.</p>
-            </div>
+      </div>
+      <div class="expertise-card">
+        <div class="mono" style="color:var(--accent-bright); font-size:.85rem;">05</div>
+        <div>
+          <h3>Validation &amp; organizational transfer</h3>
+          <p>Internal audit simulation, inspection-readiness testing, and knowledge transfer so the system runs independently.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Final CTA -->
-    <section class="cta-final">
-        <div class="container">
-            <h2>Build Regulatory Systems That Scale</h2>
-            <p>Transform your approach from reactive compliance to proactive risk governance. Let's assess your current state and design a regulatory framework aligned to your market strategy.</p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Start Your Assessment</a>
-                <a href="services.html" class="btn btn-secondary">Explore Our Services</a>
-            </div>
-        </div>
-    </section>
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Expected outcomes</h2>
+    </div>
+    <div class="trust-grid" style="border:1px solid var(--line);">
+      <div class="trust-item">
+        <div class="icon mono">01</div>
+        <h3>Reduced exposure</h3>
+        <p>Proactive risk identification ahead of regulatory surprises.</p>
+      </div>
+      <div class="trust-item">
+        <div class="icon mono">02</div>
+        <h3>No audit surprises</h3>
+        <p>Readiness is architected in, not retrofitted at audit time.</p>
+      </div>
+      <div class="trust-item">
+        <div class="icon mono">03</div>
+        <h3>Clear accountability</h3>
+        <p>Defined ownership removes ambiguity and execution delay.</p>
+      </div>
+      <div class="trust-item">
+        <div class="icon mono">04</div>
+        <h3>Scales without rebuilding</h3>
+        <p>Frameworks accommodate growth without starting over.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>NormiQ MedTech Consulting © All rights reserved</p>
-    </footer>
+<section class="split" style="display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:start;">
+  <div>
+    <h2 style="margin-bottom:16px;">What this deliberately avoids</h2>
+    <p style="max-width:48ch;">One-size-fits-all frameworks fail in regulated environments. Every engagement is scoped to the specific product classification and market strategy in front of it.</p>
+  </div>
+  <div class="checklist">
+    <div><span class="mark mono">–</span><div><strong>Checklist-driven remediation</strong><p>Risk-based prioritization drives the work, not a form.</p></div></div>
+    <div><span class="mark mono">–</span><div><strong>Document-heavy systems</strong><p>Over-documentation is organizational burden without regulatory value.</p></div></div>
+    <div><span class="mark mono">–</span><div><strong>Audit-only design</strong><p>Systems function operationally first; audit readiness follows.</p></div></div>
+    <div><span class="mark mono">–</span><div><strong>Generic frameworks</strong><p>No template applied without tailoring to your actual context.</p></div></div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h2>Build a system that scales, not one you'll rebuild.</h2>
+    <p>Let's assess where your current systems stand against this model.</p>
+    <div class="final-cta-buttons">
+      <a href="contact.html" class="btn btn-primary">Start an assessment</a>
+      <a href="services.html" class="btn btn-secondary">Explore services</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <a href="index.html" class="logo">
+          <svg class="logo-mark" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="17" cy="17" r="13.5" stroke="#7AA9D6" stroke-width="1.6"/>
+            <line x1="17" y1="1.5" x2="17" y2="8" stroke="#7AA9D6" stroke-width="1.6"/>
+            <circle cx="17" cy="17" r="2.6" fill="#7AA9D6"/>
+          </svg>
+          <span class="logo-divider"></span>
+          <span class="logo-text">Normi<span class="q-accent">Q</span></span>
+        </a>
+        <p style="margin-top:18px; max-width:32ch;">Independent regulatory and quality systems practice for medical device manufacturers.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <a href="services.html">QMS Architecture</a>
+        <a href="services.html">Digital &amp; AI Alignment</a>
+        <a href="services.html">Market Authorization</a>
+      </div>
+      <div class="footer-section">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="approach.html">Approach</a>
+        <a href="resources.html">Resources</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>regulatory@normiqmed.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 NormiQ MedTech Consulting. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>
